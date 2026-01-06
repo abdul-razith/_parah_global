@@ -1,0 +1,238 @@
+/* --- Industrial Animation Principles --- */
+:root {
+    /* Slow, confident, mechanical easing (Ease-out Cubicish) */
+    --ease-mechanical: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --ease-precision: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Scroll Reveal Utility */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s var(--ease-mechanical), transform 1s var(--ease-mechanical);
+    will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger delays for grids */
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+/* Custom Utilities */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.hero-gradient {
+    background: linear-gradient(90deg, #0f172a 0%, rgba(15, 23, 42, 0.9) 50%, rgba(15, 23, 42, 0.5) 100%);
+}
+
+.clip-diagonal {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+/* Technical Overlay for Hero */
+.technical-overlay {
+    background-image:
+        linear-gradient(rgba(93, 185, 166, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(93, 185, 166, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.technical-crosshair {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(93, 185, 166, 0.2);
+    z-index: 2;
+}
+
+.technical-crosshair::after,
+.technical-crosshair::before {
+    content: '';
+    position: absolute;
+    background: rgba(93, 185, 166, 0.3);
+}
+
+.technical-crosshair::after {
+    top: 50%;
+    left: -5px;
+    right: -5px;
+    height: 1px;
+}
+
+.technical-crosshair::before {
+    left: 50%;
+    top: -5px;
+    bottom: -5px;
+    width: 1px;
+}
+
+/* --- Mechanical Button Styles --- */
+.btn-mechanical {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s var(--ease-precision);
+    z-index: 1;
+}
+
+.btn-mechanical::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: width 0.4s var(--ease-precision);
+    z-index: -1;
+}
+
+.btn-mechanical:hover::before {
+    width: 100%;
+}
+
+.btn-mechanical:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* High Contrast CTA (Updated to Logo Teal with White Text for Better Readability) */
+.btn-safety {
+    background-color: #00838F;
+    /* Logo Teal */
+    color: #FFFFFF;
+    /* White Text for Maximum Contrast */
+    font-weight: 800;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 0 #00596D;
+    /* Darker Shadow */
+    transition: all 0.2s;
+}
+
+.btn-safety:hover {
+    background-color: #00696D;
+    /* Darker Teal on Hover */
+    box-shadow: 0 4px 0 #004150;
+}
+
+.btn-safety:active {
+    box-shadow: 0 0 0 #00596D;
+    transform: translateY(4px);
+}
+
+/* --- Icon & Card Animations --- */
+.card-hover-effect {
+    transition: transform 0.5s var(--ease-mechanical), box-shadow 0.5s var(--ease-mechanical), border-color 0.3s ease;
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-3px);
+    /* Reduced movement for subtlety */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    /* Softer, more premium shadow */
+    border-color: #5DB9A6;
+}
+
+/* Precision Rotation for Icons (Updated to Micro-Interaction) */
+.icon-precision {
+    transition: transform 0.4s var(--ease-precision), color 0.3s ease;
+    transform-origin: center center;
+}
+
+.group:hover .icon-precision {
+    transform: scale(1.1) rotate(3deg);
+    /* Very subtle zoom and tiny mechanical tilt */
+    color: #4FAF9A;
+    /* Slight color deepening */
+}
+
+/* Line Draw-in Effect */
+.line-draw {
+    position: relative;
+}
+
+.line-draw::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #5DB9A6;
+    transition: width 0.6s var(--ease-mechanical);
+}
+
+.group:hover .line-draw::after {
+    width: 100%;
+}
+
+/* Smooth inputs */
+input,
+select,
+textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #5DB9A6;
+    box-shadow: 0 0 0 4px rgba(93, 185, 166, 0.1);
+}
+
+/* Active Link Styling */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #5DB9A6;
+    transition: width 0.3s var(--ease-precision);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #5DB9A6;
+}
+
+/* Smooth Hover Card Effect (replacing 3D tilt) */
+.tilt-card {
+    transition: transform 0.4s var(--ease-mechanical), box-shadow 0.4s var(--ease-mechanical);
+    will-change: transform, box-shadow;
+}
+
+.hidden-page {
+    display: none;
+}

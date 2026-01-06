@@ -1,0 +1,75 @@
+/* Custom styling for intl-tel-input to match design */
+
+/* CRITICAL: Override intl-tel-input's inline-block default */
+.iti {
+    width: 100% !important;
+    display: block !important;
+}
+
+.intl-tel-input {
+    width: 100%;
+    display: block;
+}
+
+.iti__tel-input {
+    width: 100% !important;
+}
+
+.intl-tel-input .iti__flag-container {
+    background-color: #F2FBF8;
+    border: 1px solid #E2F1EC;
+    border-right: none;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding-right: 4px;
+}
+
+.intl-tel-input .iti__selected-flag {
+    background-color: #F2FBF8;
+    padding: 0 16px 0 12px;
+    min-width: 110px;
+    transition: all 0.3s ease;
+}
+
+.intl-tel-input .iti__selected-flag:hover {
+    border-color: #5DB9A6;
+}
+
+.intl-tel-input .iti__selected-dial-code {
+    color: #1F2937;
+    font-size: 14px;
+    margin-left: 6px;
+    font-weight: 500;
+}
+
+.intl-tel-input input,
+.intl-tel-input .iti__tel-input {
+    border-radius: 0 0.5rem 0.5rem 0 !important;
+    border-left: 1px solid #E2F1EC !important;
+    width: 100%;
+    padding-left: 12px !important;
+}
+
+.intl-tel-input .iti__country-list {
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E2F1EC;
+    max-width: 300px;
+}
+
+.intl-tel-input .iti__country:hover {
+    background-color: #F2FBF8;
+}
+
+.intl-tel-input .iti__country.iti__highlight {
+    background-color: #5DB9A6;
+    color: white;
+}
+
+.intl-tel-input .iti__dial-code {
+    color: #6B7280;
+    font-size: 14px;
+}
+
+.intl-tel-input .iti__country-name {
+    color: #1F2937;
+}

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Parah Global</title>
+    <meta name="description"
+        content="Comprehensive maritime solutions including ship repair, chandling, dry dock works, and port contracts at All Indian & International Ports.">
+
+    <!-- Google Fonts: Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            mint: '#00838F',
+                            deep: '#00696D',
+                            soft: '#26A69A',
+                            bg: '#E0F2F1',
+                            border: '#B2DFDB',
+                            amber: '#F59E0B',
+                            dark: '#0B1120',
+                        },
+                        text: {
+                            main: '#1F2937',
+                            muted: '#6B7280',
+                            light: '#9CA3AF',
+                        },
+                        neutral: {
+                            divider: '#E5E7EB',
+                        }
+                    },
+                    fontSize: {
+                        'hero': ['48px', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+                        'hero-lg': ['52px', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+                        'section': ['32px', { lineHeight: '1.3', letterSpacing: '-0.01em' }],
+                        'sub': ['20px', { lineHeight: '1.4', letterSpacing: '0em' }],
+                        'body': ['16px', { lineHeight: '1.6', letterSpacing: '0em' }],
+                        'small': ['14px', { lineHeight: '1.6', letterSpacing: '0em' }],
+                    },
+                    letterSpacing: {
+                        'tight-headings': '-0.01em',
+                        'buttons': '0.02em',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 15px rgba(0, 131, 143, 0.5)',
+                        'glow-amber': '0 0 15px rgba(245, 158, 11, 0.4)',
+                        '3d': '20px 20px 60px #d1d5db, -20px -20px 60px #ffffff',
+                        '3d-dark': '0 25px 50px -12px rgba(0, 0, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="font-sans text-text-main antialiased bg-white flex flex-col min-h-screen">
+
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-white py-2 text-small hidden md:block border-b border-gray-800">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span class="flex items-center"><i class="fas fa-phone-alt text-brand-mint mr-2 text-xs"></i> [Your
+                    Phone Number]</span>
+                <span class="flex items-center"><i class="fas fa-envelope text-brand-mint mr-2 text-xs"></i>
+                    info@parahglobal.com</span>
+            </div>
+            <div class="flex space-x-4 text-xs opacity-70">
+                <span class="uppercase tracking-widest">ISO 9001:2015 CERTIFIED</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-10 h-10 bg-brand-mint rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:bg-brand-deep transition-colors duration-300">
+                    <i class="fas fa-anchor transform group-hover:rotate-12 transition-transform duration-500"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold tracking-tight text-text-main leading-none">PARAH<span
+                            class="text-brand-mint">GLOBAL</span></span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-text-muted mt-1 leading-none">Marine
+                        Services</span>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Home</a>
+                <a href="about.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">About</a>
+                <a href="services.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Services</a>
+                <a href="works.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Works</a>
+                <a href="blog.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Insights</a>
+                <a href="contact.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Contact</a>
+                <a href="contact.html"
+                    class="btn-safety px-6 py-3 font-bold rounded shadow-lg text-sm tracking-buttons uppercase ml-2 transition-transform">Get
+                    Quote</a>
+            </div>
+
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-text-main hover:text-brand-mint text-2xl transition-colors">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-t border-neutral-divider absolute w-full left-0 shadow-xl z-50">
+            <div class="px-6 py-4 space-y-4 flex flex-col">
+                <a href="index.html" class="text-text-main font-semibold hover:text-brand-mint">Home</a>
+                <a href="about.html" class="text-text-main font-semibold hover:text-brand-mint">About</a>
+                <a href="services.html" class="text-text-main font-semibold hover:text-brand-mint">Services</a>
+                <a href="works.html" class="text-text-main font-semibold hover:text-brand-mint">Our Works</a>
+                <a href="blog.html" class="text-text-main font-semibold hover:text-brand-mint">Blogs</a>
+                <a href="contact.html" class="bg-brand-mint text-white font-bold py-3 text-center rounded">Contact
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-grow">
+        <div class="bg-gray-900 py-20 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-hero font-bold mb-4">Our Marine Services</h1>
+                <p class="text-sub text-gray-400 max-w-2xl mx-auto">Comprehensive maritime solutions at Indian &
+                    International Ports.</p>
+            </div>
+        </div>
+
+        <section class="py-20 bg-brand-bg clip-diagonal pb-40">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto perspective-1000">
+
+                    <!-- 1. Ship Repairing -->
+                    <div
+                        class="tilt-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-transparent hover:border-brand-mint/30 group relative overflow-hidden">
+                        <div class="tilt-content">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
+                                <i
+                                    class="fas fa-tools transform group-hover:rotate-45 transition-transform duration-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-main mb-3">Ship Repairing</h3>
+                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Expert afloat repairs, hull
+                                maintenance, welding fabrication, and engine troubleshooting ensuring minimal downtime.
+                            </p>
+                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Ship Chandling -->
+                    <div
+                        class="tilt-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-transparent hover:border-brand-mint/30 group relative overflow-hidden">
+                        <div class="tilt-content">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
+                                <i
+                                    class="fas fa-shopping-basket transform group-hover:scale-110 transition-transform duration-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-main mb-3">Ship Chandling</h3>
+                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Reliable supply of fresh provisions,
+                                bonded stores, deck, engine, and cabin stores sourced from high-quality vendors.</p>
+                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                    </div>
+
+                    <!-- 3. Ship Spares Supply -->
+                    <div
+                        class="tilt-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-transparent hover:border-brand-mint/30 group relative overflow-hidden">
+                        <div class="tilt-content">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
+                                <i
+                                    class="fas fa-cogs transform group-hover:rotate-180 transition-transform duration-700"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-main mb-3">Ship Spares Supply</h3>
+                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Sourcing and logistics for critical
+                                ship spares, machinery parts, and technical equipment with customs handling.</p>
+                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Dry Dock Works -->
+                    <div
+                        class="tilt-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-transparent hover:border-brand-mint/30 group relative overflow-hidden">
+                        <div class="tilt-content">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
+                                <i
+                                    class="fas fa-ship transform group-hover:-translate-y-1 transition-transform duration-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-main mb-3">Dry Dock Works</h3>
+                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Work contracts and skilled manpower
+                                management for dry docking projects, blasting, painting, and steel renewal.</p>
+                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                    </div>
+
+                    <!-- 5. Sludge Oil Collection -->
+                    <div
+                        class="tilt-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-transparent hover:border-brand-mint/30 group relative overflow-hidden">
+                        <div class="tilt-content">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
+                                <i
+                                    class="fas fa-oil-can transform group-hover:rotate-12 transition-transform duration-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-main mb-3">Sludge Oil Collection</h3>
+                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Authorized collection and disposal
+                                of sludge oil, bilge water, and maritime waste in compliance with environmental
+                                regulations.</p>
+                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Port Ocean Care -->
+                    <div
+                        class="tilt-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-transparent hover:border-brand-mint/30 group relative overflow-hidden">
+                        <div class="tilt-content">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
+                                <i
+                                    class="fas fa-water transform group-hover:scale-110 transition-transform duration-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-main mb-3">Port Ocean Care</h3>
+                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Oil spillage cleaning, underwater
+                                hull surveys, propeller polishing, and dredging support services.</p>
+                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                    </div>
+
+                    <!-- 7-10 additional services -->
+                    <div
+                        class="tilt-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-transparent hover:border-brand-mint/30 group relative overflow-hidden">
+                        <div class="tilt-content">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
+                                <i
+                                    class="fas fa-file-signature transform group-hover:-translate-y-1 transition-transform duration-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-main mb-3">Port Marine Contracts</h3>
+                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Long-term operational contracts for
+                                port marine services, tug boat operations, and mooring support.</p>
+                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="tilt-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-transparent hover:border-brand-mint/30 group relative overflow-hidden">
+                        <div class="tilt-content">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
+                                <i
+                                    class="fas fa-truck-loading transform group-hover:scale-110 transition-transform duration-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-main mb-3">Port Shore Contracts</h3>
+                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Civil and mechanical engineering
+                                contracts for port infrastructure, shore equipment maintenance, and logistics.</p>
+                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="tilt-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-transparent hover:border-brand-mint/30 group relative overflow-hidden">
+                        <div class="tilt-content">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
+                                <i
+                                    class="fas fa-anchor transform group-hover:rotate-45 transition-transform duration-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-main mb-3">Salvage Operations</h3>
+                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Emergency response, wreck removal,
+                                and cargo recovery services with specialized equipment and teams.</p>
+                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="tilt-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl border border-transparent hover:border-brand-mint/30 group relative overflow-hidden">
+                        <div class="tilt-content">
+                            <div
+                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
+                                <i
+                                    class="fas fa-user-friends transform group-hover:scale-110 transition-transform duration-500"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-text-main mb-3">Manning Services</h3>
+                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Recruitment and placement of
+                                qualified officers and crew for various types of vessels.</p>
+                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-gray-900 text-white pt-20 pb-10 border-t border-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 pointer-events-none"
+            style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center bg-gray-800 p-8 rounded-2xl mb-16 border border-gray-700 shadow-2xl">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Newsletter Signup</h3>
+                    <p class="text-gray-400 text-sm">Stay updated with the latest marine insights and port news.</p>
+                </div>
+                <form class="flex w-full md:w-auto gap-2">
+                    <input type="email" placeholder="Enter Your Email Address"
+                        class="px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-brand-mint w-full md:w-64">
+                    <button
+                        class="bg-brand-mint hover:bg-brand-deep text-brand-dark font-bold px-6 py-3 rounded-lg transition-colors shadow-glow flex items-center">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div
+                            class="w-10 h-10 bg-brand-mint rounded flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight text-white">PARAH<span
+                                class="text-brand-mint">GLOBAL</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">We provide professional logistics services of
+                        all types, ensuring precision and reliability for every vessel at All Indian & International
+                        Ports.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-mint hover:text-white transition-all duration-300 group">
+                            <i class="fab fa-facebook-f group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-mint hover:text-white transition-all duration-300 group">
+                            <i class="fab fa-twitter group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-mint hover:text-white transition-all duration-300 group">
+                            <i class="fab fa-instagram group-hover:scale-110 transition-transform"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-mint hover:text-white transition-all duration-300 group">
+                            <i class="fab fa-dribbble group-hover:scale-110 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-6 text-white text-lg relative inline-block">
+                        Menu
+                        <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-mint rounded-full"></span>
+                    </h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="index.html"
+                                class="hover:text-brand-mint transition-colors flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-[10px] text-brand-mint"></i> Home</a></li>
+                        <li><a href="about.html"
+                                class="hover:text-brand-mint transition-colors flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-[10px] text-brand-mint"></i> About Us</a></li>
+                        <li><a href="services.html"
+                                class="hover:text-brand-mint transition-colors flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-[10px] text-brand-mint"></i> Services</a></li>
+                        <li><a href="blog.html"
+                                class="hover:text-brand-mint transition-colors flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-[10px] text-brand-mint"></i> Insights</a></li>
+                        <li><a href="contact.html"
+                                class="hover:text-brand-mint transition-colors flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-[10px] text-brand-mint"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-6 text-white text-lg relative inline-block">
+                        Services
+                        <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-mint rounded-full"></span>
+                    </h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="services.html" class="hover:text-brand-mint transition-colors">Ship Repairing</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-brand-mint transition-colors">Ship Chandling</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-brand-mint transition-colors">Dry Dock Works</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-brand-mint transition-colors">Port Marine
+                                Contracts</a></li>
+                        <li><a href="services.html" class="hover:text-brand-mint transition-colors">Salvage
+                                Operations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-6 text-white text-lg relative inline-block">
+                        Say Hello
+                        <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-mint rounded-full"></span>
+                    </h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3 group">
+                            <i class="fas fa-map-marker-alt text-brand-mint mt-1 group-hover:animate-bounce"></i>
+                            <span class="group-hover:text-white transition-colors">All Indian & International Ports,
+                                India</span>
+                            India</span>
+                        </li>
+                        <li class="flex items-center gap-3 group">
+                            <i class="fas fa-phone-alt text-brand-mint group-hover:animate-pulse"></i>
+                            <span class="group-hover:text-white transition-colors">[Your Phone Number]</span>
+                        </li>
+                        <li class="flex items-center gap-3 group">
+                            <i class="fas fa-envelope text-brand-mint"></i>
+                            <span class="group-hover:text-white transition-colors">info@parahglobal.com</span>
+                        </li>
+                        <li class="flex items-center gap-3 group">
+                            <i class="fas fa-clock text-brand-mint"></i>
+                            <span class="group-hover:text-white transition-colors">Mon - Sun: 24 Hours</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 Parah Global. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-brand-mint transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand-mint transition-colors">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

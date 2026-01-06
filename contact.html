@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Parah Global</title>
+    <meta name="description"
+        content="Get in touch with Parah Global for ship repair, chandling, and marine services at All Indian & International Ports. 24/7 support available.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Manrope', 'sans-serif'] },
+                    colors: {
+                        brand: {
+                            mint: '#00838F', deep: '#00696D', soft: '#26A69A',
+                            bg: '#E0F2F1', border: '#B2DFDB', amber: '#F59E0B', dark: '#0B1120'
+                        },
+                        text: { main: '#1F2937', muted: '#6B7280', light: '#9CA3AF' },
+                        neutral: { divider: '#E5E7EB' }
+                    },
+                    fontSize: {
+                        'hero': ['48px', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+                        'section': ['32px', { lineHeight: '1.3', letterSpacing: '-0.01em' }],
+                        'sub': ['20px', { lineHeight: '1.4' }],
+                        'body': ['16px', { lineHeight: '1.6' }],
+                        'small': ['14px', { lineHeight: '1.6' }]
+                    },
+                    boxShadow: { 'glow': '0 0 15px rgba(93, 185, 166, 0.5)', '3d-dark': '0 25px 50px -12px rgba(0, 0, 0, 0.5)' }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="font-sans text-text-main antialiased bg-white flex flex-col min-h-screen">
+    <div class="bg-gray-900 text-white py-2 text-small hidden md:block border-b border-gray-800">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span class="flex items-center"><i class="fas fa-phone-alt text-brand-mint mr-2 text-xs"></i> [Your
+                    Phone Number]</span>
+                <span class="flex items-center"><i class="fas fa-envelope text-brand-mint mr-2 text-xs"></i>
+                    info@parahglobal.com</span>
+            </div>
+            <div class="flex space-x-4 text-xs opacity-70"><span class="uppercase tracking-widest">ISO 9001:2015
+                    CERTIFIED</span></div>
+        </div>
+    </div>
+
+    <nav class="sticky top-0 z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-10 h-10 bg-brand-mint rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:bg-brand-deep transition-colors duration-300">
+                    <i class="fas fa-anchor transform group-hover:rotate-12 transition-transform duration-500"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-bold tracking-tight text-text-main leading-none">PARAH<span
+                            class="text-brand-mint">GLOBAL</span></span>
+                    <span class="text-[10px] uppercase tracking-[0.2em] text-text-muted mt-1 leading-none">Marine
+                        Services</span>
+                </div>
+            </a>
+
+            <div class="hidden lg:flex items-center space-x-8">
+                <a href="index.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Home</a>
+                <a href="about.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">About</a>
+                <a href="services.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Services</a>
+                <a href="works.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Works</a>
+                <a href="blog.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Insights</a>
+                <a href="contact.html"
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Contact</a>
+                <a href="contact.html"
+                    class="btn-safety px-6 py-3 font-bold rounded shadow-lg text-sm tracking-buttons uppercase ml-2 transition-transform">Get
+                    Quote</a>
+            </div>
+
+            <button id="mobile-menu-btn"
+                class="lg:hidden text-text-main hover:text-brand-mint text-2xl transition-colors"><i
+                    class="fas fa-bars"></i></button>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden lg:hidden bg-white border-t border-neutral-divider absolute w-full left-0 shadow-xl z-50">
+            <div class="px-6 py-4 space-y-4 flex flex-col">
+                <a href="index.html" class="text-text-main font-semibold hover:text-brand-mint">Home</a>
+                <a href="about.html" class="text-text-main font-semibold hover:text-brand-mint">About</a>
+                <a href="services.html" class="text-text-main font-semibold hover:text-brand-mint">Services</a>
+                <a href="works.html" class="text-text-main font-semibold hover:text-brand-mint">Our Works</a>
+                <a href="blog.html" class="text-text-main font-semibold hover:text-brand-mint">Blogs</a>
+                <a href="contact.html" class="bg-brand-mint text-white font-bold py-3 text-center rounded">Contact
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        <!-- Contact Hero -->
+        <div class="bg-brand-dark py-24 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-20">
+                <img src="https://images.unsplash.com/photo-1494412574643-35d324698420?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+                    alt="Global Connectivity" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-transparent"></div>
+            <div class="container mx-auto px-6 relative z-10 text-center md:text-left">
+                <span class="text-brand-mint font-bold uppercase tracking-widest text-xs mb-2 block">24/7 Support</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4">Get in Touch</h1>
+                <p class="text-gray-400 max-w-xl text-lg">Reach out to our marine experts at All Indian & International
+                    Ports for
+                    immediate assistance with ship repair, chandling, or logistics.</p>
+            </div>
+        </div>
+
+        <!-- Contact Content -->
+        <section class="py-20 bg-gray-50 relative -mt-10">
+            <div class="container mx-auto px-6 relative z-20">
+                <div class="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+                    <!-- Contact Info Card (Dark) -->
+                    <div
+                        class="bg-brand-dark text-white p-10 rounded-2xl shadow-3d-dark relative overflow-hidden tilt-card">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-brand-mint/10 rounded-full blur-3xl -mr-16 -mt-16">
+                        </div>
+
+                        <h3 class="text-2xl font-bold mb-8">Contact Information</h3>
+
+                        <div class="space-y-8 tilt-content">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-brand-mint flex-shrink-0">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Headquarters</p>
+                                    <p class="font-medium leading-relaxed">All Indian & International Ports,<br>India
+                                    </p>
+                                    Nadu,<br>India - 628004</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-brand-mint flex-shrink-0">
+                                    <i class="fas fa-phone-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Phone & WhatsApp</p>
+                                    <p class="font-medium text-lg">[Your Phone Number]</p>
+                                    <p class="text-sm text-gray-400 mt-1">Available 24/7 for Emergencies</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center text-brand-mint flex-shrink-0">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-gray-400 uppercase tracking-wider mb-1">Email Us</p>
+                                    <p class="font-medium">info@parahglobal.com</p>
+                                    <p class="text-sm text-gray-400">support@parahglobal.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-12">
+                            <p class="text-sm text-gray-400 mb-4">Follow us:</p>
+                            <div class="flex gap-4">
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-mint hover:border-brand-mint hover:text-white transition-all">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-mint hover:border-brand-mint hover:text-white transition-all">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#"
+                                    class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-brand-mint hover:border-brand-mint hover:text-white transition-all">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form (Light) -->
+                    <div class="lg:col-span-2 bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
+                        <h3 class="text-2xl font-bold text-text-main mb-2">Send us a Message</h3>
+                        <p class="text-text-muted mb-8">Have a specific requirement? Fill out the form below.</p>
+
+                        <form class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-1">
+                                    <label class="text-sm font-bold text-text-main">Your Name</label>
+                                    <input type="text" placeholder="John Doe"
+                                        class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all placeholder-gray-500 text-text-main">
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-sm font-bold text-text-main">Company / Vessel</label>
+                                    <input type="text" placeholder="Company Name"
+                                        class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all placeholder-gray-500 text-text-main">
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-1">
+                                    <label class="text-sm font-bold text-text-main">Email Address</label>
+                                    <input type="email" placeholder="email@example.com"
+                                        class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all placeholder-gray-500 text-text-main">
+                                </div>
+                                <div class="space-y-1">
+                                    <label class="text-sm font-bold text-text-main">Phone Number</label>
+                                    <input type="tel" placeholder="+91..."
+                                        class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all placeholder-gray-500 text-text-main">
+                                </div>
+                            </div>
+
+                            <div class="space-y-1">
+                                <label class="text-sm font-bold text-text-main">Subject</label>
+                                <select
+                                    class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all text-text-main">
+                                    <option>Request for Quotation</option>
+                                    <option>Ship Repair Inquiry</option>
+                                    <option>Chandling Services</option>
+                                    <option>Partnership Proposal</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="space-y-1">
+                                <label class="text-sm font-bold text-text-main">Message</label>
+                                <textarea rows="4" placeholder="Tell us about your requirements..."
+                                    class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all resize-none placeholder-gray-500 text-text-main"></textarea>
+                            </div>
+
+                            <button
+                                class="btn-safety w-full md:w-auto px-10 py-4 font-bold rounded-lg shadow-lg flex items-center justify-center gap-2 uppercase tracking-buttons">
+                                <span>Send Message</span> <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Map Integration Placeholder -->
+                <div
+                    class="mt-12 h-96 bg-gray-200 rounded-2xl overflow-hidden shadow-inner border border-gray-300 relative group">
+                    <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80"
+                        alt="Map Location"
+                        class="w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700">
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div
+                            class="bg-white p-4 rounded-xl shadow-2xl flex items-center gap-3 transform -translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                            <div class="text-brand-deep text-3xl"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <p class="font-bold text-gray-900">Parah Global</p>
+                                <p class="text-xs text-gray-500">All Indian & International Ports</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-4 right-4 flex flex-col gap-2">
+                        <div
+                            class="w-10 h-10 bg-white rounded shadow flex items-center justify-center text-gray-600 hover:text-brand-mint cursor-pointer">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div
+                            class="w-10 h-10 bg-white rounded shadow flex items-center justify-center text-gray-600 hover:text-brand-mint cursor-pointer">
+                            <i class="fas fa-minus"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white pt-20 pb-10 border-t border-gray-800 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 pointer-events-none"
+            style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center bg-gray-800 p-8 rounded-2xl mb-16 border border-gray-700 shadow-2xl">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-2 text-white">Newsletter Signup</h3>
+                    <p class="text-gray-400 text-sm">Stay updated with the latest marine insights and port news.</p>
+                </div>
+                <form class="flex w-full md:w-auto gap-2">
+                    <input type="email" placeholder="Enter Your Email Address"
+                        class="px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-brand-mint w-full md:w-64">
+                    <button
+                        class="bg-brand-mint hover:bg-brand-deep text-brand-dark font-bold px-6 py-3 rounded-lg transition-colors shadow-glow flex items-center"><i
+                            class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div
+                            class="w-10 h-10 bg-brand-mint rounded flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight text-white">PARAH<span
+                                class="text-brand-mint">GLOBAL</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">We provide professional logistics services of
+                        all types, ensuring precision and reliability for every vessel at All Indian & International
+                        Ports.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-mint hover:text-white transition-all duration-300 group"><i
+                                class="fab fa-facebook-f group-hover:scale-110 transition-transform"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-mint hover:text-white transition-all duration-300 group"><i
+                                class="fab fa-twitter group-hover:scale-110 transition-transform"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-mint hover:text-white transition-all duration-300 group"><i
+                                class="fab fa-instagram group-hover:scale-110 transition-transform"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-mint hover:text-white transition-all duration-300 group"><i
+                                class="fab fa-dribbble group-hover:scale-110 transition-transform"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-6 text-white text-lg relative inline-block">Menu<span
+                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-mint rounded-full"></span></h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="index.html"
+                                class="hover:text-brand-mint transition-colors flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-[10px] text-brand-mint"></i> Home</a></li>
+                        <li><a href="about.html"
+                                class="hover:text-brand-mint transition-colors flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-[10px] text-brand-mint"></i> About Us</a></li>
+                        <li><a href="services.html"
+                                class="hover:text-brand-mint transition-colors flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-[10px] text-brand-mint"></i> Services</a></li>
+                        <li><a href="blog.html"
+                                class="hover:text-brand-mint transition-colors flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-[10px] text-brand-mint"></i> Insights</a></li>
+                        <li><a href="contact.html"
+                                class="hover:text-brand-mint transition-colors flex items-center gap-2"><i
+                                    class="fas fa-chevron-right text-[10px] text-brand-mint"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-6 text-white text-lg relative inline-block">Services<span
+                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-mint rounded-full"></span></h4>
+                    <ul class="space-y-3 text-sm text-gray-400">
+                        <li><a href="services.html" class="hover:text-brand-mint transition-colors">Ship Repairing</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-brand-mint transition-colors">Ship Chandling</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-brand-mint transition-colors">Dry Dock Works</a>
+                        </li>
+                        <li><a href="services.html" class="hover:text-brand-mint transition-colors">Port Marine
+                                Contracts</a></li>
+                        <li><a href="services.html" class="hover:text-brand-mint transition-colors">Salvage
+                                Operations</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-6 text-white text-lg relative inline-block">Say Hello<span
+                            class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brand-mint rounded-full"></span></h4>
+                    <ul class="space-y-4 text-sm text-gray-400">
+                        <li class="flex items-start gap-3 group"><i
+                                class="fas fa-map-marker-alt text-brand-mint mt-1 group-hover:animate-bounce"></i> <span
+                                class="group-hover:text-white transition-colors">All Indian & International Ports,
+                                India</span>
+                            India</span></li>
+                        <li class="flex items-center gap-3 group"><i
+                                class="fas fa-phone-alt text-brand-mint group-hover:animate-pulse"></i> <span
+                                class="group-hover:text-white transition-colors">[Your Phone Number]</span></li>
+                        <li class="flex items-center gap-3 group"><i class="fas fa-envelope text-brand-mint"></i> <span
+                                class="group-hover:text-white transition-colors">info@parahglobal.com</span></li>
+                        <li class="flex items-center gap-3 group"><i class="fas fa-clock text-brand-mint"></i> <span
+                                class="group-hover:text-white transition-colors">Mon - Sun: 24 Hours</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 Parah Global. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-brand-mint transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand-mint transition-colors">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
