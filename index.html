@@ -76,6 +76,7 @@
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/intl-tel-input-custom.css">
+    <link rel="stylesheet" href="assets/css/curved-loop.css">
 </head>
 
 <body class="font-sans text-text-main antialiased bg-white flex flex-col min-h-screen">
@@ -344,148 +345,147 @@
         </section>
 
         <!-- Services Overview (Home) -->
-        <section class="py-24 bg-brand-bg border-y border-brand-border/50">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16 reveal-on-scroll">
-                    <span class="text-brand-mint font-bold uppercase tracking-buttons mb-2 block text-xs">Core
-                        Capabilities</span>
-                    <h2 class="text-section font-bold text-text-main">Services Overview</h2>
+        <section class="py-16 px-6 md:px-12 lg:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto">
+                <!-- Grid Layout: 1 column on mobile, 2 on tablet, 4 on desktop -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8 lg:gap-y-16 lg:gap-x-12">
+
+                    <!-- Main Text Area (Spans 2 columns on large screens) -->
+                    <div class="col-span-1 md:col-span-2 flex flex-col justify-center pr-0 lg:pr-12">
+                        <span class="text-xs uppercase tracking-widest font-bold text-gray-500 mb-4 block">
+                            MARINE SERVICES
+                        </span>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-text-main">
+                            The services we offer
+                        </h2>
+                        <p class="text-lg leading-relaxed max-w-2xl text-gray-600">
+                            We provide comprehensive marine and logistics solutions designed to keep your vessels
+                            operational and compliant.
+                        </p>
+                    </div>
+
+                    <!-- Service Item 1: Ship Repairing (Row 1, Col 3) -->
+                    <article class="flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-tools text-3xl text-brand-mint"></i>
+                        </div>
+                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                            Ship Repairing
+                        </h3>
+                    </article>
+
+                    <!-- Service Item 2: Ship Chandling (Row 1, Col 4) -->
+                    <article class="flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-box-open text-3xl text-brand-mint"></i>
+                        </div>
+                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                            Ship Chandling
+                        </h3>
+                    </article>
+
+                    <!-- Service Item 3: Dry Dock Works (Row 2, Col 1) -->
+                    <article class="flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-ship text-3xl text-brand-mint"></i>
+                        </div>
+                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                            Dry Dock Works
+                        </h3>
+                    </article>
+
+                    <!-- Service Item 4: Port Contracts (Row 2, Col 2) -->
+                    <article class="flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-file-contract text-3xl text-brand-mint"></i>
+                        </div>
+                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                            Port Marine Contracts
+                        </h3>
+                    </article>
+
+                    <!-- Service Item 5: Sludge Oil Collection (Row 2, Col 3) -->
+                    <article class="flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-oil-can text-3xl text-brand-mint"></i>
+                        </div>
+                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                            Sludge Oil Collection
+                        </h3>
+                    </article>
+
+                    <!-- Service Item 6: Salvage Operations (Row 2, Col 4) -->
+                    <article class="flex flex-col items-center text-center h-full">
+                        <div
+                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-anchor text-3xl text-brand-mint"></i>
+                        </div>
+                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                            Salvage Operations
+                        </h3>
+                    </article>
+
                 </div>
-                <!-- Home Page Preview: Top 4 Services -->
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto perspective-1000">
-                    <!-- Repair Card -->
-                    <div
-                        class="tilt-card bg-white p-8 rounded-xl shadow-sm border border-transparent hover:border-brand-mint group reveal-on-scroll delay-100 relative overflow-hidden">
-                        <div class="tilt-content h-full flex flex-col">
-                            <div
-                                class="w-12 h-12 bg-brand-bg rounded-lg flex items-center justify-center text-2xl text-brand-mint mb-4">
-                                <i class="fas fa-tools icon-precision"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3 line-draw inline-block">Ship Repairing</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed flex-grow">Afloat repairs, welding,
-                                and mechanical support during port stay.</p>
-                            <a href="services.html"
-                                class="text-brand-mint font-bold text-xs uppercase tracking-wide hover:underline inline-flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Learn
-                                More <i class="fas fa-chevron-right text-[10px]"></i></a>
-                        </div>
-                    </div>
 
-                    <!-- Chandling Card -->
-                    <div
-                        class="tilt-card bg-white p-8 rounded-xl shadow-sm border border-transparent hover:border-brand-mint group reveal-on-scroll delay-200 relative overflow-hidden">
-                        <div class="tilt-content h-full flex flex-col">
-                            <div
-                                class="w-12 h-12 bg-brand-bg rounded-lg flex items-center justify-center text-2xl text-brand-mint mb-4">
-                                <i class="fas fa-box-open icon-precision"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3 line-draw inline-block">Ship Chandling</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed flex-grow">Provisions, deck, engine,
-                                and cabin stores supply.</p>
-                            <a href="services.html"
-                                class="text-brand-mint font-bold text-xs uppercase tracking-wide hover:underline inline-flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Learn
-                                More <i class="fas fa-chevron-right text-[10px]"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Dry Dock Card -->
-                    <div
-                        class="tilt-card bg-white p-8 rounded-xl shadow-sm border border-transparent hover:border-brand-mint group reveal-on-scroll delay-300 relative overflow-hidden">
-                        <div class="tilt-content h-full flex flex-col">
-                            <div
-                                class="w-12 h-12 bg-brand-bg rounded-lg flex items-center justify-center text-2xl text-brand-mint mb-4">
-                                <i class="fas fa-ship icon-precision"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3 line-draw inline-block">Dry Dock Works</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed flex-grow">Work contracts and
-                                manpower management for dry docking.</p>
-                            <a href="services.html"
-                                class="text-brand-mint font-bold text-xs uppercase tracking-wide hover:underline inline-flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Learn
-                                More <i class="fas fa-chevron-right text-[10px]"></i></a>
-                        </div>
-                    </div>
-
-                    <!-- Marine Contracts Card -->
-                    <div
-                        class="tilt-card bg-white p-8 rounded-xl shadow-sm border border-transparent hover:border-brand-mint group reveal-on-scroll delay-300 relative overflow-hidden">
-                        <div class="tilt-content h-full flex flex-col">
-                            <div
-                                class="w-12 h-12 bg-brand-bg rounded-lg flex items-center justify-center text-2xl text-brand-mint mb-4">
-                                <i class="fas fa-file-contract icon-precision"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3 line-draw inline-block">Port Contracts</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed flex-grow">Comprehensive marine and
-                                shore mechanical contracts.</p>
-                            <a href="services.html"
-                                class="text-brand-mint font-bold text-xs uppercase tracking-wide hover:underline inline-flex items-center gap-1 group-hover:gap-2 transition-all mt-auto">Learn
-                                More <i class="fas fa-chevron-right text-[10px]"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-12 reveal-on-scroll delay-300">
+                <!-- View All Button -->
+                <div class="text-center mt-16">
                     <a href="services.html"
-                        class="btn-mechanical inline-block px-10 py-4 border border-brand-mint text-brand-mint hover:bg-brand-mint hover:text-white font-bold rounded transition uppercase tracking-buttons text-sm">
+                        class="btn-safety inline-block px-10 py-4 font-bold rounded-lg transition uppercase tracking-buttons text-sm shadow-lg hover:shadow-xl">
                         View All Services
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Why Choose Us -->
+        <!-- Marquee Text Animation -->
+        <section class="marquee-section bg-gray-50 py-12 overflow-hidden">
+            <div class="marquee-wrapper">
+                <div class="marquee-content">
+                    <div class="marquee-item">PARAH GLOBAL • MARINE SERVICES • PARAH GLOBAL • MARINE SERVICES • PARAH
+                        GLOBAL • MARINE SERVICES • PARAH GLOBAL • MARINE SERVICES • </div>
+                    <div class="marquee-item">PARAH GLOBAL • MARINE SERVICES • PARAH GLOBAL • MARINE SERVICES • PARAH
+                        GLOBAL • MARINE SERVICES • PARAH GLOBAL • MARINE SERVICES • </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us - Redesigned -->
         <section class="py-24 bg-white">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16 reveal-on-scroll">
-                    <h2 class="text-section font-bold text-text-main">Why Choose Parah Global</h2>
-                </div>
-                <div class="grid md:grid-cols-4 gap-8 perspective-1000">
-                    <div
-                        class="tilt-card text-center p-8 rounded-xl border border-gray-100 hover:border-brand-mint/30 hover:shadow-lg group reveal-on-scroll delay-100 bg-white">
-                        <div class="tilt-content">
-                            <div
-                                class="w-16 h-16 bg-brand-mint/5 text-brand-mint rounded-full flex items-center justify-center text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 ease-out">
-                                <i class="fas fa-map-marked-alt icon-precision"></i>
-                            </div>
-                            <h3 class="font-bold text-lg mb-3 text-text-main">Strong Port Knowledge</h3>
-                            <p class="text-text-muted text-sm leading-relaxed">Deep understanding of Indian &
-                                International port operations
-                                ensuring smooth clearances.</p>
+                <div class="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
+
+                    <!-- Left Column - Image -->
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1566024287286-457247b70310?w=800&q=80"
+                            alt="Ship repair and maintenance services" class="w-full h-auto rounded-2xl shadow-lg">
+                    </div>
+
+                    <!-- Right Column - Content -->
+                    <div class="flex flex-col justify-center">
+                        <span class="text-xs uppercase tracking-widest font-bold text-gray-500 mb-4 block">
+                            MARINE EXCELLENCE
+                        </span>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-text-main">
+                            Reliable marine support at every port
+                        </h2>
+                        <p class="text-lg leading-relaxed text-gray-600 mb-8">
+                            From emergency repairs to routine maintenance, our experienced team delivers comprehensive
+                            marine solutions across All Indian & International ports. With 24/7 support and deep port
+                            knowledge, we ensure your vessels operate efficiently and safely.
+                        </p>
+
+                        <!-- Bottom Image -->
+                        <div class="relative mt-8">
+                            <img src="https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=800&q=80"
+                                alt="Container shipping and port logistics" class="w-full h-auto rounded-2xl shadow-lg">
                         </div>
                     </div>
-                    <div
-                        class="tilt-card text-center p-8 rounded-xl border border-gray-100 hover:border-brand-mint/30 hover:shadow-lg group reveal-on-scroll delay-200 bg-white">
-                        <div class="tilt-content">
-                            <div
-                                class="w-16 h-16 bg-brand-mint/5 text-brand-mint rounded-full flex items-center justify-center text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 ease-out">
-                                <i class="fas fa-stopwatch icon-precision"></i>
-                            </div>
-                            <h3 class="font-bold text-lg mb-3 text-text-main">Quick Response</h3>
-                            <p class="text-text-muted text-sm leading-relaxed">24/7 support team ready to handle urgent
-                                requirements and emergencies.</p>
-                        </div>
-                    </div>
-                    <div
-                        class="tilt-card text-center p-8 rounded-xl border border-gray-100 hover:border-brand-mint/30 hover:shadow-lg group reveal-on-scroll delay-300 bg-white">
-                        <div class="tilt-content">
-                            <div
-                                class="w-16 h-16 bg-brand-mint/5 text-brand-mint rounded-full flex items-center justify-center text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 ease-out">
-                                <i class="fas fa-certificate icon-precision"></i>
-                            </div>
-                            <h3 class="font-bold text-lg mb-3 text-text-main">Trusted Vendors</h3>
-                            <p class="text-text-muted text-sm leading-relaxed">Sourcing high-quality marine-grade
-                                supplies from verified suppliers.</p>
-                        </div>
-                    </div>
-                    <div
-                        class="tilt-card text-center p-8 rounded-xl border border-gray-100 hover:border-brand-mint/30 hover:shadow-lg group reveal-on-scroll delay-400 bg-white">
-                        <div class="tilt-content">
-                            <div
-                                class="w-16 h-16 bg-brand-mint/5 text-brand-mint rounded-full flex items-center justify-center text-2xl mx-auto mb-6 group-hover:scale-110 transition-transform duration-500 ease-out">
-                                <i class="fas fa-handshake icon-precision"></i>
-                            </div>
-                            <h3 class="font-bold text-lg mb-3 text-text-main">Transparent Pricing</h3>
-                            <p class="text-text-muted text-sm leading-relaxed">Clear, upfront cost breakdowns and
-                                coordination with no hidden fees.</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </section>

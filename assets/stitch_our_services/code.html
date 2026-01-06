@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Global Logistics Services</title>
+<!-- Load Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration to match specific colors and fonts -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'logistics-bg': '#f0f4f8',
+            'logistics-text': '#1a202c', // Dark grey/black for headlines
+            'logistics-body': '#4a5568', // Softer grey for body text
+          },
+          fontFamily: {
+            sans: ['system-ui', '-apple-system', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+<!-- Custom Styles for specific adjustments not easily covered by utilities -->
+<style data-purpose="icon-styling">
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+      mix-blend-mode: multiply;
+    }
+  </style>
+</head>
+<body class="bg-logistics-bg font-sans text-logistics-text antialiased">
+<!-- BEGIN: Services Section -->
+<section class="w-full py-16 px-6 md:px-12 lg:py-24" data-purpose="services-container">
+<div class="max-w-7xl mx-auto">
+<!-- Grid Layout: 1 column on mobile, 2 on tablet, 4 on desktop -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8 lg:gap-y-16 lg:gap-x-12 gap-y-12 gap-x-16">
+<!-- 
+          BEGIN: Main Text Area 
+          Spans 2 columns on large screens (Row 1, Cols 1-2)
+        -->
+<div class="col-span-1 md:col-span-2 flex flex-col justify-center pr-0 lg:pr-12">
+<span class="text-xs uppercase tracking-[1px] font-bold text-gray-500 mb-4 block">
+            Global Logistics
+          </span>
+<h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-logistics-text">
+            The services we offer
+          </h2>
+<p class="text-lg leading-relaxed max-w-2xl text-logistics-body">
+            We provide end-to-end logistics solutions designed to streamline your operations, ensuring your goods move efficiently and securely across borders. From warehousing to last-mile delivery, our expertise connects your business to the world.
+          </p>
+</div>
+<!-- END: Main Text Area -->
+<!-- 
+          BEGIN: Service Items (Row 1)
+        -->
+<!-- Service Item 1: Freight Forwarding (Row 1, Col 3) -->
+<article class="flex flex-col items-start h-full">
+<img alt="Freight forwarding icon" class="service-icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2Dbu5qLW9rJWh80wxjrAlrdHlXHrillC2s6RwnpWDdBoBUP5ku-MuuqXhPCbJ6Mieq9jgPSjtQ5990WO1ZMGBG3VZc0K9aeYIla0llPJuuc4dLV_2T8U5Tth4z-Gd6UthzYmJWNVlOPrU3WHBYo1WcS5ttNqkicFDVRxH5lTLdVm5Oc_aod6_lYY1VNVhMCpgvAlVU4gFkPNAmpBDI5OfuC4KgYaWfsfgl0FSa88X03nDfYAwkuFnW98MAgnHQbcsS5E8T_RJM2Q"/>
+<h3 class="text-xl font-bold leading-snug text-gray-900 w-3/4">
+            Freight forwarding solutions
+          </h3>
+</article>
+<!-- Service Item 2: Multi-modal transport (Row 1, Col 4) -->
+<article class="flex flex-col items-start h-full">
+<img alt="Multi-modal transport icon" class="service-icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2-_JXiBWVgS9hQzAOl5I1hBLehL6Lqdn0WQ6ZVOdb1Qspt1fN_EUbAldpuXDSf5_-Y6z2ofiG7rSuasoLS2IFiyQ4VovtB3y2ebsz7l6-faqLQpDkD8lZFBIu0lBaznkMOnL5ADf3A417HYPOavEJNbd_GQEMZzUH-11ITyqgzg_RW6gYR9CmjrLk7igqEYz1Q6udu0WlNPJ8jwsOxROb_yKGlNDhlmhmihplMB5s3tBSL0VYnN1SHPWxZGfSdew2NPIPVdvCRjc"/>
+<h3 class="text-xl font-bold leading-snug text-gray-900 w-3/4">
+            Multi-modal transport
+          </h3>
+</article>
+<!-- END: Service Items (Row 1) -->
+<!-- 
+          BEGIN: Service Items (Row 2)
+        -->
+<!-- Service Item 3: Supply chain optimization (Row 2, Col 1) -->
+<article class="flex flex-col items-start h-full">
+<img alt="Supply chain icon" class="service-icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD6GiUVBC4rnf1i8pj31w9jhIJmKaoBQy4HHiRY6E10x20swiDKey8lFziH_soFDuOI4fHkGgH2B16aMvajhJJ3hZcBJCFjuxpn80f1EJzrIHcsv8po9WuDiop8Ai7N1xR6jMX6ruxV4Sb9ODlUhlvrdz9UtuY8FDgTfbvgzRitSZEGzLcbCE9zWCFBrQpeujwZqcUdLJRyP9ctWLzg-RNAyPBdN7zHHVL_BziC-JNKH4SBC1gvGKMOnEsk-E-7Xb-u54pMoeSliY"/>
+<h3 class="text-xl font-bold leading-snug text-gray-900 w-3/4">
+            Supply chain optimization
+          </h3>
+</article>
+<!-- Service Item 4: Cross-border shipping (Row 2, Col 2) -->
+<article class="flex flex-col items-start h-full">
+<img alt="Cross-border icon" class="service-icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxykXrtY6InIZ2PRpnJKUCBy_smRTneqv3u09dxtKiNRnf42POiPKw8bUR_pKVDpJZQCEzcoVHxJIF2Cn1v8GcXhPRpy2M_9BRsHdZcxR_BJBcdvvEsT_uCVH9QZ_MwphA7c4QiyJ6Hut355jmQhSypdw03m9pEtB3O6Cs4Ewi2pJcD50cw9QVJZnTACHZpwpSppUPuBA01c9fmD6KwTqnZqJIsWp2Xw_stG3M9f9fAX8TTBrWw5B93SGCvYlVV8EBpIlc-Li-6fQ"/>
+<h3 class="text-xl font-bold leading-snug text-gray-900 w-3/4">
+            Cross-border shipping
+          </h3>
+</article>
+<!-- Service Item 5: Customs clearance assistance (Row 2, Col 3) -->
+<article class="flex flex-col items-start h-full">
+<img alt="Customs clearance icon" class="service-icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA2sMBwOF9jYOPCgA6M50REBA_46GCBqk1bmPKb-u3xX1knXcM_v04TnffRjLrHNtOvTIs1CPWnpw6X6yN8r653G2OEkwCEiqKM6AfQgfoSxQ7852bQhxQdEVWtR6ce4tUxMn4Eoy3Rcr8K19MQUWC-laOukD4_keGT-iBW2NNPcvKQbxjjXhj2gNfUcCsePZUL4Tt0PFCn5qqLrn4nYVrMkbWxwdS4CU3XEzEyiFdpddAaruwYvsiQ1TI4VXpgxqTFiJr1R7v7-g"/>
+<h3 class="text-xl font-bold leading-snug text-gray-900 w-3/4">
+            Customs clearance assistance
+          </h3>
+</article>
+<!-- Service Item 6: Risk management services (Row 2, Col 4) -->
+<article class="flex flex-col items-start h-full">
+<img alt="Risk management icon" class="service-icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-w2b8i82aYYmwXVXOxwa7LNnBCblrRoECdQN124fZJoVxbz4J-3e7cJJ7k6GhahTa9HRHBAG2_EOumhR3DfkC7uaxfilyhx2QDvw7RNoJr4ugV7OuHBPM01PONnd7l6jQgvTkeTNjbReN5UwAo0olN6yTFMRvEwGCUsLWTHaWQeOkzxu_IC4arauvZKv4y-H2iYVgtHmnX-wkXWY111AlcrCXCgrEHhWpgkM9bFAgeVBxTtaVSObobwXF9MPz04Z97malNw5Nnuo"/>
+<h3 class="text-xl font-bold leading-snug text-gray-900 w-3/4">
+            Risk management services
+          </h3>
+</article>
+<!-- END: Service Items (Row 2) -->
+</div>
+</div>
+</section>
+<!-- END: Services Section -->
+</body></html>
