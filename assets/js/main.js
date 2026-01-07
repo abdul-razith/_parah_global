@@ -11,12 +11,24 @@ if (btn && menu) {
 // Sticky Navbar Effect
 window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
+    const logo = document.getElementById('nav-logo');
+
     if (window.scrollY > 50) {
-        navbar.classList.add('py-2', 'shadow-md');
-        navbar.classList.remove('py-4');
+        navbar.classList.add('py-1', 'shadow-md');
+        navbar.classList.remove('py-2');
+
+        if (logo) {
+            logo.classList.remove('h-24');
+            logo.classList.add('h-16');
+        }
     } else {
-        navbar.classList.remove('py-2', 'shadow-md');
-        navbar.classList.add('py-4');
+        navbar.classList.remove('py-1', 'shadow-md');
+        navbar.classList.add('py-2');
+
+        if (logo) {
+            logo.classList.remove('h-16');
+            logo.classList.add('h-24');
+        }
     }
 });
 

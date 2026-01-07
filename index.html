@@ -9,7 +9,7 @@
         content="Parah Global - Reliable marine support for vessels at Indian and International port. Ship repair and ship chandling services delivered with speed and precision.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="assets/image/logo.jpeg">
+    <link rel="icon" type="image/png" href="assets/image/logo.png">
 
     <!-- Google Fonts: Manrope -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -101,16 +101,11 @@
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 glass-nav transition-all duration-300" id="navbar">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="container mx-auto px-6 py-0 flex justify-between items-center">
             <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-3 group">
-                <img src="assets/image/logo.jpeg" alt="Parah Global Logo" class="h-12 w-auto">
-                <div class="flex flex-col">
-                    <span class="text-2xl font-bold tracking-tight text-text-main leading-none">PARAH<span
-                            class="text-brand-mint">GLOBAL</span></span>
-                    <span class="text-[10px] uppercase tracking-[0.2em] text-text-muted mt-1 leading-none">Marine
-                        Services</span>
-                </div>
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img id="nav-logo" src="assets/image/logo.png" alt="Parah Global"
+                    class="h-24 w-auto transition-all duration-300">
             </a>
 
             <!-- Desktop Menu -->
@@ -173,15 +168,16 @@
 
                 <div class="absolute inset-0 hero-gradient z-10"></div>
                 <!-- Technical UI Overlay -->
-                <div class="technical-overlay z-10"></div>
+                <!-- <div class="technical-overlay z-10"></div> -->
                 <!-- Decorative Crosshairs -->
-                <div class="technical-crosshair top-1/4 left-1/4 opacity-50 z-20"></div>
-                <div class="technical-crosshair bottom-1/4 right-1/4 opacity-50 z-20"></div>
+                <!-- <div class="technical-crosshair top-1/4 left-1/4 opacity-50 z-20"></div>
+                <div class="technical-crosshair bottom-1/4 right-1/4 opacity-50 z-20"></div> -->
             </div>
 
             <div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center pt-10">
                 <div class="text-white space-y-8 reveal-on-scroll is-visible">
                     <div class="flex items-center gap-3">
+                        <span class="h-px w-20 bg-gradient-to-l from-brand-mint/50 to-transparent"></span>
                         <span
                             class="inline-block px-3 py-1 bg-brand-mint/10 border border-brand-mint/30 rounded text-brand-mint font-semibold tracking-buttons uppercase text-[10px] backdrop-blur-sm">
                             Parah Global Marine
@@ -345,7 +341,7 @@
         </section>
 
         <!-- Services Overview (Home) -->
-        <section class="py-16 px-6 md:px-12 lg:py-24 bg-gray-50">
+        <section class="py-16 px-6 md:px-12 lg:py-24 bg-brand-bg">
             <div class="max-w-7xl mx-auto">
                 <!-- Grid Layout: 1 column on mobile, 2 on tablet, 4 on desktop -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8 lg:gap-y-16 lg:gap-x-12">
@@ -443,19 +439,33 @@
         </section>
 
         <!-- Marquee Text Animation -->
-        <section class="marquee-section bg-gray-50 py-12 overflow-hidden">
-            <div class="marquee-wrapper">
-                <div class="marquee-content">
-                    <div class="marquee-item">PARAH GLOBAL • MARINE SERVICES • PARAH GLOBAL • MARINE SERVICES • PARAH
-                        GLOBAL • MARINE SERVICES • PARAH GLOBAL • MARINE SERVICES • </div>
-                    <div class="marquee-item">PARAH GLOBAL • MARINE SERVICES • PARAH GLOBAL • MARINE SERVICES • PARAH
-                        GLOBAL • MARINE SERVICES • PARAH GLOBAL • MARINE SERVICES • </div>
+        <section class="marquee-section bg-white py-12 overflow-hidden">
+            <div class="marquee">
+                <div class="marquee-track">
+                    <span>PARAH GLOBAL</span>
+                    <span class="rotating-icon">
+                        <img src="assets/image/star2.png" alt="">
+                    </span>
+                    <span>MARINE SERVICES</span>
+                    <span class="rotating-icon">
+                        <img src="assets/image/star2.png" alt="">
+                    </span>
+
+                    <!-- Duplicate for seamless loop -->
+                    <span>PARAH GLOBAL</span>
+                    <span class="rotating-icon">
+                        <img src="assets/image/star2.png" alt="">
+                    </span>
+                    <span>MARINE SERVICES</span>
+                    <span class="rotating-icon">
+                        <img src="assets/image/star2.png" alt="">
+                    </span>
                 </div>
             </div>
         </section>
 
         <!-- Why Choose Us - Redesigned -->
-        <section class="py-24 bg-white">
+        <section class="py-24 bg-brand-bg">
             <div class="container mx-auto px-6">
                 <div class="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
 
@@ -478,6 +488,56 @@
                             marine solutions across All Indian & International ports. With 24/7 support and deep port
                             knowledge, we ensure your vessels operate efficiently and safely.
                         </p>
+
+                        <!-- Key Features Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-2 mb-8">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-mint/10 flex items-center justify-center text-brand-mint shrink-0">
+                                    <i class="fas fa-anchor"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-text-main text-sm">Strong Port Knowledge</h4>
+                                    <p class="text-xs text-text-muted mt-1">Expertise providing seamless support across
+                                        all ports.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-mint/10 flex items-center justify-center text-brand-mint shrink-0">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-text-main text-sm">Quick Response</h4>
+                                    <p class="text-xs text-text-muted mt-1">24/7 rapid mobilization for emergency
+                                        repairs.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-mint/10 flex items-center justify-center text-brand-mint shrink-0">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-text-main text-sm">Trusted Vendors</h4>
+                                    <p class="text-xs text-text-muted mt-1">Sourcing high-quality spares from reliable
+                                        partners.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-mint/10 flex items-center justify-center text-brand-mint shrink-0">
+                                    <i class="fas fa-file-invoice-dollar"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-text-main text-sm">Transparent Pricing</h4>
+                                    <p class="text-xs text-text-muted mt-1">Clear cost structures with no hidden
+                                        charges.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Bottom Image -->
                         <div class="relative mt-8">
@@ -565,7 +625,7 @@
         </section>
 
         <!-- Short Blogs Section (Home) -->
-        <section class="py-24 bg-white">
+        <section class="py-24 bg-brand-bg">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 reveal-on-scroll">
                     <span
@@ -683,14 +743,9 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- Col 1: Brand & About -->
                 <div>
-                    <div class="flex items-center gap-2 mb-6">
-                        <div
-                            class="w-10 h-10 bg-brand-mint rounded flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                            <i class="fas fa-cube"></i>
-                        </div>
-                        <span class="text-2xl font-bold tracking-tight text-white">PARAH<span
-                                class="text-brand-mint">GLOBAL</span></span>
-                    </div>
+                    <a href="index.html" class="block mb-6">
+                        <img src="assets/image/logo.png" alt="Parah Global" class="h-12 w-auto">
+                    </a>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
                         We provide professional logistics services of all types, ensuring precision and reliability for
                         every vessel at All Indian & International Ports.
@@ -790,13 +845,8 @@
             </div>
 
             <!-- Bottom Bar -->
-            <div
-                class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-                <p>&copy; 2026 Parah Global. All Rights Reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="hover:text-brand-mint transition-colors">Privacy Policy</a>
-                    <a href="#" class="hover:text-brand-mint transition-colors">Terms & Conditions</a>
-                </div>
+            <div class="border-t border-gray-800 pt-8 flex justify-center items-center text-sm text-gray-500">
+                <p>&copy; 2026 Bezalel design studio. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
