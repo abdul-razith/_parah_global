@@ -52,13 +52,55 @@ document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
     observer.observe(el);
 });
 
-// Simple Form Handler
+// Simple Form Handler (Generic)
 document.querySelectorAll('form').forEach(form => {
+    // Skip forms that have specific handlers
+    if (form.id === 'hero-quote-form') return;
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         alert('Request received. Our marine team will contact you shortly.');
     });
 });
+
+// Hero Quote Form Handler (Web3Forms Integration)
+const heroForm = document.getElementById('hero-quote-form');
+if (heroForm) {
+    const submitBtn = heroForm.querySelector('button[type="submit"]');
+
+    heroForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(heroForm);
+        formData.append("access_key", "0ac9e31f-be1d-48c4-829e-e5de6641c3b7");
+
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = "Sending...";
+        submitBtn.disabled = true;
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                alert("Success! Your message has been sent.");
+                heroForm.reset();
+            } else {
+                alert("Error: " + data.message);
+            }
+
+        } catch (error) {
+            alert("Something went wrong. Please try again.");
+        } finally {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+}
 
 // Smooth Hover Effect for Cards (replacing 3D tilt)
 document.addEventListener('DOMContentLoaded', () => {
