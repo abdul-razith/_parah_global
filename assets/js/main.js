@@ -55,26 +55,85 @@ document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
 // Simple Form Handler (Generic)
 document.querySelectorAll('form').forEach(form => {
     // Skip forms that have specific handlers
-    if (form.id === 'hero-quote-form') return;
+    if (form.id === 'hero-quote-form' || form.id === 'contact-page-form') return;
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        alert('Request received. Our marine team will contact you shortly.');
+        // Success Toast
+        showToast('Request received. Our marine team will contact you shortly.', 'success');
     });
 });
 
-// Hero Quote Form Handler (Web3Forms Integration)
-const heroForm = document.getElementById('hero-quote-form');
-if (heroForm) {
-    const submitBtn = heroForm.querySelector('button[type="submit"]');
+// Toast Notification Helper
+function showToast(message, type = 'success') {
+    let toastContainer = document.querySelector('.toast-container');
 
-    heroForm.addEventListener('submit', async (e) => {
+    // Create container if it doesn't exist
+    if (!toastContainer) {
+        toastContainer = document.createElement('div');
+        toastContainer.className = 'toast-container';
+        document.body.appendChild(toastContainer);
+    }
+
+    // Create toast element
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+
+    // Icon based on type
+    const iconClass = type === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle';
+
+    toast.innerHTML = `
+        <i class="fas ${iconClass}"></i>
+        <span>${message}</span>
+    `;
+
+    // Append to container
+    toastContainer.appendChild(toast);
+
+    // Trigger animation
+    requestAnimationFrame(() => {
+        toast.classList.add('show');
+    });
+
+    // Remove after 4 seconds
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => {
+            toast.remove();
+        }, 400); // Wait for transition out
+    }, 4000);
+}
+
+// Web3Forms Integration Handler (Reusable)
+function attachWeb3FormHandler(formId) {
+    const form = document.getElementById(formId);
+    if (!form) return;
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        const formData = new FormData(heroForm);
+        // Validation Check
+        if (!form.checkValidity()) {
+            showToast("Please fill in all required fields.", 'error');
+            // Allow browser default validation UI to show (if needed, but preventing default might stop it, so we rely on toast)
+            // Actually, if we preventDefault() immediately, the browser popup might not show. 
+            // Better to let browser handle validation? 
+            // The user asked for "show any type of message or error use the same style toast message".
+            // So suppressing browser default and using Toast is better.
+
+            // To highlight invalid fields we can do:
+            form.reportValidity();
+            return;
+        }
+
+        const formData = new FormData(form);
         formData.append("access_key", "0ac9e31f-be1d-48c4-829e-e5de6641c3b7");
 
-        const originalText = submitBtn.textContent;
+        // Keep the icon if it exists, simplified for now:
+        const originalHtml = submitBtn.innerHTML;
+
         submitBtn.textContent = "Sending...";
         submitBtn.disabled = true;
 
@@ -87,20 +146,40 @@ if (heroForm) {
             const data = await response.json();
 
             if (response.ok) {
-                alert("Success! Your message has been sent.");
-                heroForm.reset();
+                showToast("Success! Your message has been sent.", 'success');
+
+                // Button Success State
+                submitBtn.textContent = "Message Sent!";
+                submitBtn.style.backgroundColor = "#00838F"; // Brand Mint
+                submitBtn.style.borderColor = "#00838F";
+
+                form.reset();
+
+                // Revert button after 4 seconds
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalHtml; // Restore original text + icon
+                    submitBtn.style.backgroundColor = ""; // Reset to default CSS
+                    submitBtn.style.borderColor = "";
+                    submitBtn.disabled = false;
+                }, 4000);
+
             } else {
-                alert("Error: " + data.message);
+                showToast("Error: " + data.message, 'error');
+                submitBtn.innerHTML = originalHtml;
+                submitBtn.disabled = false;
             }
 
         } catch (error) {
-            alert("Something went wrong. Please try again.");
-        } finally {
-            submitBtn.textContent = originalText;
+            showToast("Something went wrong. Please try again.", 'error');
+            submitBtn.innerHTML = originalHtml;
             submitBtn.disabled = false;
         }
     });
 }
+
+// Initialize Handlers
+attachWeb3FormHandler('hero-quote-form');
+attachWeb3FormHandler('contact-page-form');
 
 // Smooth Hover Effect for Cards (replacing 3D tilt)
 document.addEventListener('DOMContentLoaded', () => {

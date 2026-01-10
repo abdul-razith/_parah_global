@@ -38,7 +38,7 @@
     /* Gold - override parent span color */
 
     /* Icon rotation */
-    animation: spin 3s linear infinite;
+    animation: spin 4s linear infinite;
 }
 
 .rotating-icon img {

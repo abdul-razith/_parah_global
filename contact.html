@@ -64,7 +64,7 @@
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2 group">
                 <img id="nav-logo" src="assets/image/logo.png" alt="Parah Global"
-                    class="h-24 w-auto transition-all duration-300">
+                    class="h-16 md:h-20 lg:h-24 w-auto transition-all duration-300">
             </a>
 
             <div class="hidden lg:flex items-center space-x-8">
@@ -194,20 +194,20 @@
                     </div>
 
                     <!-- Contact Form (Light) -->
-                    <div class="lg:col-span-2 bg-white p-10 rounded-2xl shadow-xl border border-gray-100">
+                    <div class="lg:col-span-2 card-neumorphic p-10">
                         <h3 class="text-2xl font-bold text-text-main mb-2">Send us a Message</h3>
                         <p class="text-text-muted mb-8">Have a specific requirement? Fill out the form below.</p>
 
-                        <form class="space-y-6">
+                        <form id="contact-page-form" class="space-y-6">
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="space-y-1">
                                     <label class="text-sm font-bold text-text-main">Your Name</label>
-                                    <input type="text" placeholder="John Doe"
+                                    <input type="text" name="name" placeholder="John Doe" required
                                         class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all placeholder-gray-500 text-text-main">
                                 </div>
                                 <div class="space-y-1">
                                     <label class="text-sm font-bold text-text-main">Company / Vessel</label>
-                                    <input type="text" placeholder="Company Name"
+                                    <input type="text" name="company" placeholder="Company Name" required
                                         class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all placeholder-gray-500 text-text-main">
                                 </div>
                             </div>
@@ -215,19 +215,19 @@
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div class="space-y-1">
                                     <label class="text-sm font-bold text-text-main">Email Address</label>
-                                    <input type="email" placeholder="email@example.com"
+                                    <input type="email" name="email" placeholder="email@example.com" required
                                         class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all placeholder-gray-500 text-text-main">
                                 </div>
                                 <div class="space-y-1">
                                     <label class="text-sm font-bold text-text-main">Phone Number</label>
-                                    <input type="tel" placeholder="+91..."
+                                    <input type="tel" name="phone" placeholder="+91..." required
                                         class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all placeholder-gray-500 text-text-main">
                                 </div>
                             </div>
 
                             <div class="space-y-1">
                                 <label class="text-sm font-bold text-text-main">Subject</label>
-                                <select
+                                <select name="subject"
                                     class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all text-text-main">
                                     <option>Request for Quotation</option>
                                     <option>Ship Repair Inquiry</option>
@@ -239,12 +239,13 @@
 
                             <div class="space-y-1">
                                 <label class="text-sm font-bold text-text-main">Message</label>
-                                <textarea rows="4" placeholder="Tell us about your requirements..."
+                                <textarea name="message" rows="4" placeholder="Tell us about your requirements..."
+                                    required
                                     class="w-full bg-gray-50 border border-gray-300 rounded-lg px-4 py-3 focus:bg-white focus:border-brand-mint focus:ring-4 focus:ring-brand-mint/10 outline-none transition-all resize-none placeholder-gray-500 text-text-main"></textarea>
                             </div>
 
-                            <button
-                                class="btn-safety w-full md:w-auto px-8 py-4 font-bold rounded shadow-lg flex items-center justify-center gap-2 uppercase tracking-buttons">
+                            <button type="submit"
+                                class="btn-mechanical w-full bg-text-main hover:bg-black text-white font-bold py-4 rounded transition shadow-md tracking-buttons uppercase mt-2 flex items-center justify-center gap-2">
                                 <span>Send Message</span> <i class="fas fa-paper-plane"></i>
                             </button>
                         </form>
@@ -286,25 +287,12 @@
         <div class="absolute inset-0 opacity-5 pointer-events-none"
             style="background-image: radial-gradient(#ffffff 1px, transparent 1px); background-size: 20px 20px;"></div>
         <div class="container mx-auto px-6 relative z-10">
-            <div
-                class="flex flex-col md:flex-row justify-between items-center bg-gray-800 p-8 rounded-2xl mb-16 border border-gray-700 shadow-2xl">
-                <div class="mb-6 md:mb-0">
-                    <h3 class="text-2xl font-bold mb-2 text-white">Newsletter Signup</h3>
-                    <p class="text-gray-400 text-sm">Stay updated with the latest marine insights and port news.</p>
-                </div>
-                <form class="flex w-full md:w-auto gap-2">
-                    <input type="email" placeholder="Enter Your Email Address"
-                        class="px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-brand-mint w-full md:w-64">
-                    <button
-                        class="bg-brand-mint hover:bg-brand-deep text-brand-dark font-bold px-6 py-3 rounded-lg transition-colors shadow-glow flex items-center"><i
-                            class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
+
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div>
                     <a href="index.html" class="block mb-6">
-                        <img src="assets/image/logo.png" alt="Parah Global" class="h-12 w-auto">
+                        <img src="assets/image/logo.png" alt="Parah Global" class="h-20 w-auto">
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">We provide professional logistics services of
                         all types, ensuring precision and reliability for every vessel at All Indian & International

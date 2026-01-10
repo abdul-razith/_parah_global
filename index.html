@@ -105,7 +105,7 @@
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2 group">
                 <img id="nav-logo" src="assets/image/logo.png" alt="Parah Global"
-                    class="h-24 w-auto transition-all duration-300">
+                    class="h-16 md:h-20 lg:h-24 w-auto transition-all duration-300">
             </a>
 
             <!-- Desktop Menu -->
@@ -119,13 +119,10 @@
                 <a href="works.html"
                     class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Works</a>
                 <a href="blog.html"
-                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Insights</a>
+                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Blogs</a>
                 <a href="contact.html"
-                    class="nav-link text-text-main font-semibold text-sm uppercase tracking-buttons">Contact</a>
-                <a href="contact.html"
-                    class="btn-safety px-6 py-3 font-bold rounded shadow-lg text-sm tracking-buttons uppercase ml-2 transition-transform">
-                    Get Quote
-                </a>
+                    class="bg-brand-mint text-white font-bold py-3 px-6 rounded shadow-md transition hover:shadow-lg text-sm uppercase tracking-buttons">Contact
+                    Us</a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -237,7 +234,7 @@
 
                 <!-- Quick Contact Form -->
                 <div
-                    class="hidden lg:block bg-white/95 backdrop-blur-md p-8 rounded-xl shadow-2xl border-t-4 border-brand-mint max-w-md ml-auto reveal-on-scroll delay-200">
+                    class="block bg-white/95 backdrop-blur-md p-8 rounded-xl shadow-2xl border-t-4 border-brand-mint max-w-md ml-auto reveal-on-scroll delay-200">
                     <div class="flex justify-between items-center mb-6">
                         <h3 class="text-section text-xl font-bold text-text-main">Need Marine Support?</h3>
                         <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
@@ -252,8 +249,9 @@
                                 <label
                                     class="block text-[11px] font-bold uppercase tracking-widest text-text-muted mb-1">Service
                                     Type</label>
-                                <select name="service_type"
+                                <select name="service_type" required
                                     class="w-full bg-brand-bg border border-brand-border rounded px-4 py-3 text-small focus:bg-white text-text-main cursor-pointer hover:border-brand-mint transition-colors focus:outline-none focus:border-brand-mint">
+                                    <option value="" disabled selected>Select Service</option>
                                     <option>Ship Repair</option>
                                     <option>Ship Chandling</option>
                                     <option>General Enquiry</option>
@@ -263,7 +261,7 @@
                                 <label
                                     class="block text-[11px] font-bold uppercase tracking-widest text-text-muted mb-1">Port
                                     Location</label>
-                                <input type="text" name="port_location" placeholder="Indian / Intl Port"
+                                <input type="text" name="port_location" placeholder="Indian / Intl Port" required
                                     class="w-full bg-brand-bg border border-brand-border rounded px-4 py-3 text-small focus:bg-white placeholder-gray-400 focus:outline-none focus:border-brand-mint transition-colors">
                             </div>
                         </div>
@@ -274,14 +272,14 @@
                                 <label
                                     class="block text-[11px] font-bold uppercase tracking-widest text-text-muted mb-1">Vessel
                                     Name</label>
-                                <input type="text" name="vessel_name" placeholder="MV Name"
+                                <input type="text" name="vessel_name" placeholder="MV Name" required
                                     class="w-full bg-brand-bg border border-brand-border rounded px-4 py-3 text-small focus:bg-white placeholder-gray-400 focus:outline-none focus:border-brand-mint transition-colors">
                             </div>
                             <div>
                                 <label
                                     class="block text-[11px] font-bold uppercase tracking-widest text-text-muted mb-1">Next
                                     Port</label>
-                                <input type="text" name="next_port" placeholder="Port Name"
+                                <input type="text" name="next_port" placeholder="Port Name" required
                                     class="w-full bg-brand-bg border border-brand-border rounded px-4 py-3 text-small focus:bg-white placeholder-gray-400 focus:outline-none focus:border-brand-mint transition-colors">
                             </div>
                         </div>
@@ -290,7 +288,7 @@
                         <div>
                             <label
                                 class="block text-[11px] font-bold uppercase tracking-widest text-text-muted mb-1">Phone</label>
-                            <input type="tel" id="phone-input" name="phone" placeholder="Mobile Number"
+                            <input type="tel" id="phone-input" name="phone" placeholder="Mobile Number" required
                                 class="w-full bg-brand-bg border border-brand-border rounded px-4 py-3 text-small focus:bg-white placeholder-gray-400 focus:outline-none focus:border-brand-mint transition-colors">
                         </div>
 
@@ -304,8 +302,13 @@
         </section>
 
         <!-- About Snapshot (Home) -->
-        <section class="py-24 bg-white">
-            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <section class="py-24 bg-white relative overflow-hidden">
+            <!-- Background Illustration -->
+            <div class="absolute inset-0 pointer-events-none opacity-10">
+                <img src="assets/image/sections-bg/section-bg-1.png" alt=""
+                    class="absolute right-0 top-0 w-full h-full object-cover">
+            </div>
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 md:gap-16 items-center relative z-10">
                 <div class="reveal-on-scroll">
                     <span class="text-brand-mint font-bold uppercase tracking-buttons mb-2 block text-xs">About
                         Us</span>
@@ -343,11 +346,12 @@
         <!-- Services Overview (Home) -->
         <section class="py-16 lg:py-24 bg-gray-50">
             <div class="container mx-auto px-6">
-                <!-- Grid Layout: 1 column on mobile, 2 on tablet, 4 on desktop -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8 lg:gap-y-16 lg:gap-x-12">
+                <!-- Grid Layout: 2 columns on mobile, 2 on tablet, 4 on desktop -->
+                <div
+                    class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-y-8 gap-x-6 md:gap-y-12 md:gap-x-8 lg:gap-y-16 lg:gap-x-12">
 
-                    <!-- Main Text Area (Spans 2 columns on large screens) -->
-                    <div class="col-span-1 md:col-span-2 flex flex-col justify-center pr-0 lg:pr-12">
+                    <!-- Main Text Area (Spans 2 columns on all screens, full width on large) -->
+                    <div class="col-span-2 lg:col-span-2 flex flex-col justify-center pr-0 lg:pr-12">
                         <span class="text-xs uppercase tracking-widest font-bold text-gray-500 mb-4 block">
                             MARINE SERVICES
                         </span>
@@ -361,67 +365,73 @@
                     </div>
 
                     <!-- Service Item 1: Ship Repairing (Row 1, Col 3) -->
-                    <article class="flex flex-col items-center text-center h-full">
+                    <article
+                        class="card-neumorphic flex flex-col items-center text-center h-full p-4 lg:p-8 hover:-translate-y-2">
                         <div
-                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-tools text-3xl text-brand-mint"></i>
+                            class="w-12 h-12 lg:w-16 lg:h-16 mb-2 lg:mb-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-brand-mint shadow-sm">
+                            <i class="fas fa-tools text-2xl lg:text-3xl text-brand-mint"></i>
                         </div>
-                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                        <h3 class="text-sm lg:text-xl font-bold leading-snug text-gray-900">
                             Ship Repairing
                         </h3>
                     </article>
 
                     <!-- Service Item 2: Ship Chandling (Row 1, Col 4) -->
-                    <article class="flex flex-col items-center text-center h-full">
+                    <article
+                        class="card-neumorphic flex flex-col items-center text-center h-full p-4 lg:p-8 hover:-translate-y-2">
                         <div
-                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-box-open text-3xl text-brand-mint"></i>
+                            class="w-12 h-12 lg:w-16 lg:h-16 mb-2 lg:mb-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-brand-mint shadow-sm">
+                            <i class="fas fa-box-open text-2xl lg:text-3xl text-brand-mint"></i>
                         </div>
-                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                        <h3 class="text-sm lg:text-xl font-bold leading-snug text-gray-900">
                             Ship Chandling
                         </h3>
                     </article>
 
                     <!-- Service Item 3: Dry Dock Works (Row 2, Col 1) -->
-                    <article class="flex flex-col items-center text-center h-full">
+                    <article
+                        class="card-neumorphic flex flex-col items-center text-center h-full p-4 lg:p-8 hover:-translate-y-2">
                         <div
-                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-ship text-3xl text-brand-mint"></i>
+                            class="w-12 h-12 lg:w-16 lg:h-16 mb-2 lg:mb-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-brand-mint shadow-sm">
+                            <i class="fas fa-ship text-2xl lg:text-3xl text-brand-mint"></i>
                         </div>
-                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                        <h3 class="text-sm lg:text-xl font-bold leading-snug text-gray-900">
                             Dry Dock Works
                         </h3>
                     </article>
 
                     <!-- Service Item 4: Port Contracts (Row 2, Col 2) -->
-                    <article class="flex flex-col items-center text-center h-full">
+                    <article
+                        class="card-neumorphic flex flex-col items-center text-center h-full p-4 lg:p-8 hover:-translate-y-2">
                         <div
-                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-file-contract text-3xl text-brand-mint"></i>
+                            class="w-12 h-12 lg:w-16 lg:h-16 mb-2 lg:mb-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-brand-mint shadow-sm">
+                            <i class="fas fa-file-contract text-2xl lg:text-3xl text-brand-mint"></i>
                         </div>
-                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                        <h3 class="text-sm lg:text-xl font-bold leading-snug text-gray-900">
                             Port Marine Contracts
                         </h3>
                     </article>
 
                     <!-- Service Item 5: Sludge Oil Collection (Row 2, Col 3) -->
-                    <article class="flex flex-col items-center text-center h-full">
+                    <article
+                        class="card-neumorphic flex flex-col items-center text-center h-full p-4 lg:p-8 hover:-translate-y-2">
                         <div
-                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-oil-can text-3xl text-brand-mint"></i>
+                            class="w-12 h-12 lg:w-16 lg:h-16 mb-2 lg:mb-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-brand-mint shadow-sm">
+                            <i class="fas fa-oil-can text-2xl lg:text-3xl text-brand-mint"></i>
                         </div>
-                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                        <h3 class="text-sm lg:text-xl font-bold leading-snug text-gray-900">
                             Sludge Oil Collection
                         </h3>
                     </article>
 
                     <!-- Service Item 6: Salvage Operations (Row 2, Col 4) -->
-                    <article class="flex flex-col items-center text-center h-full">
+                    <article
+                        class="card-neumorphic flex flex-col items-center text-center h-full p-4 lg:p-8 hover:-translate-y-2">
                         <div
-                            class="w-16 h-16 mb-4 rounded-2xl bg-white border-2 border-brand-mint/20 flex items-center justify-center hover:border-brand-mint hover:shadow-lg transition-all duration-300">
-                            <i class="fas fa-anchor text-3xl text-brand-mint"></i>
+                            class="w-12 h-12 lg:w-16 lg:h-16 mb-2 lg:mb-4 rounded-2xl bg-gray-50 border border-gray-100 flex items-center justify-center text-brand-mint shadow-sm">
+                            <i class="fas fa-anchor text-2xl lg:text-3xl text-brand-mint"></i>
                         </div>
-                        <h3 class="text-xl font-bold leading-snug text-gray-900 max-w-[120px]">
+                        <h3 class="text-sm lg:text-xl font-bold leading-snug text-gray-900">
                             Salvage Operations
                         </h3>
                     </article>
@@ -444,29 +454,29 @@
                 <div class="marquee-track">
                     <span>PARAH GLOBAL</span>
                     <span class="rotating-icon">
-                        <img src="assets/image/star2.png" alt="">
+                        <img src="assets/image/star-marquee.svg" alt="">
                     </span>
                     <span>MARINE SERVICES</span>
                     <span class="rotating-icon">
-                        <img src="assets/image/star2.png" alt="">
+                        <img src="assets/image/star-marquee.svg" alt="">
                     </span>
 
                     <!-- Duplicate for seamless loop -->
                     <span>PARAH GLOBAL</span>
                     <span class="rotating-icon">
-                        <img src="assets/image/star2.png" alt="">
+                        <img src="assets/image/star-marquee.svg" alt="">
                     </span>
                     <span>MARINE SERVICES</span>
                     <span class="rotating-icon">
-                        <img src="assets/image/star2.png" alt="">
+                        <img src="assets/image/star-marquee.svg" alt="">
                     </span>
                 </div>
             </div>
         </section>
 
         <!-- Why Choose Us - Redesigned -->
-        <section class="py-24 bg-white">
-            <div class="container mx-auto px-6">
+        <section class="py-24 bg-gray-50 relative overflow-hidden">
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="grid lg:grid-cols-2 gap-12 items-start max-w-7xl mx-auto">
 
                     <!-- Left Column - Image -->
@@ -483,11 +493,51 @@
                         <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-text-main">
                             Reliable marine support at every port
                         </h2>
-                        <p class="text-lg leading-relaxed text-gray-600 mb-8">
-                            From emergency repairs to routine maintenance, our experienced team delivers comprehensive
-                            marine solutions across All Indian & International ports. With 24/7 support and deep port
-                            knowledge, we ensure your vessels operate efficiently and safely.
-                        </p>
+                        <div class="grid sm:grid-cols-2 gap-x-4 gap-y-8 mb-8">
+                            <!-- Feature 1 -->
+                            <div class="card-neumorphic p-6 space-y-2">
+                                <div
+                                    class="w-10 h-10 rounded bg-gray-50 flex items-center justify-center text-brand-mint mb-1 shadow-sm">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h3 class="font-bold text-text-main leading-tight">24/7 Global Availability</h3>
+                                <p class="text-sm text-text-muted leading-relaxed">Round-the-clock support for vessels
+                                    at any Indian or international port.</p>
+                            </div>
+
+                            <!-- Feature 2 -->
+                            <div class="card-neumorphic p-6 space-y-2">
+                                <div
+                                    class="w-10 h-10 rounded bg-gray-50 flex items-center justify-center text-brand-mint mb-1 shadow-sm">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <h3 class="font-bold text-text-main leading-tight">Cost-Effective Solutions</h3>
+                                <p class="text-sm text-text-muted leading-relaxed">Competitive pricing without
+                                    compromising on quality or safety standards.</p>
+                            </div>
+
+                            <!-- Feature 3 -->
+                            <div class="card-neumorphic p-6 space-y-2">
+                                <div
+                                    class="w-10 h-10 rounded bg-gray-50 flex items-center justify-center text-brand-mint mb-1 shadow-sm">
+                                    <i class="fas fa-users-cog"></i>
+                                </div>
+                                <h3 class="font-bold text-text-main leading-tight">Experienced Team</h3>
+                                <p class="text-sm text-text-muted leading-relaxed">Decades of combined marine
+                                    engineering and logistics expertise.</p>
+                            </div>
+
+                            <!-- Feature 4 -->
+                            <div class="card-neumorphic p-6 space-y-2">
+                                <div
+                                    class="w-10 h-10 rounded bg-gray-50 flex items-center justify-center text-brand-mint mb-1 shadow-sm">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3 class="font-bold text-text-main leading-tight">Safety & Compliance</h3>
+                                <p class="text-sm text-text-muted leading-relaxed">Strict adherence to international
+                                    maritime safety regulations.</p>
+                            </div>
+                        </div>
 
                         <!-- Bottom Image -->
                         <div class="relative mt-8">
@@ -575,8 +625,13 @@
         </section>
 
         <!-- Short Blogs Section (Home) -->
-        <section class="py-24 bg-white">
-            <div class="container mx-auto px-6">
+        <section class="py-24 bg-gray-50 relative overflow-hidden">
+            <!-- Background Illustration -->
+            <div class="absolute inset-0 pointer-events-none opacity-10">
+                <img src="assets/image/sections-bg/section-bg-3.png" alt=""
+                    class="absolute right-0 top-0 w-full h-full object-cover">
+            </div>
+            <div class="container mx-auto px-6 relative z-10">
                 <div class="text-center mb-16 reveal-on-scroll">
                     <span
                         class="text-brand-mint font-bold uppercase tracking-buttons mb-2 block text-xs">Insights</span>
@@ -586,7 +641,7 @@
                 <div class="grid md:grid-cols-3 gap-8 perspective-1000">
                     <!-- Blog Preview 1 (Dry Dock) -->
                     <a href="blog-post.html?slug=dry-dock-maintenance"
-                        class="tilt-card group block reveal-on-scroll delay-100 bg-white rounded-lg shadow-sm border border-gray-100">
+                        class="tilt-card card-neumorphic group block reveal-on-scroll delay-100 bg-white shadow-sm border border-gray-100">
                         <div class="tilt-content h-full">
                             <div class="h-56 overflow-hidden rounded-t-lg mb-5 relative">
                                 <img src="https://images.unsplash.com/photo-1535498730771-e735b998cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
@@ -609,7 +664,7 @@
 
                     <!-- Blog Preview 2 (Propeller/Hull) -->
                     <a href="blog-post.html?slug=underwater-hull-cleaning"
-                        class="tilt-card group block reveal-on-scroll delay-200 bg-white rounded-lg shadow-sm border border-gray-100">
+                        class="tilt-card card-neumorphic group block reveal-on-scroll delay-200 bg-white shadow-sm border border-gray-100">
                         <div class="tilt-content h-full">
                             <div class="h-56 overflow-hidden rounded-t-lg mb-5 relative">
                                 <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
@@ -632,7 +687,7 @@
 
                     <!-- Blog Preview 3 (Engine Room) -->
                     <a href="blog-post.html?slug=common-engine-repair-issues"
-                        class="tilt-card group block reveal-on-scroll delay-300 bg-white rounded-lg shadow-sm border border-gray-100">
+                        class="tilt-card card-neumorphic group block reveal-on-scroll delay-300 bg-white shadow-sm border border-gray-100">
                         <div class="tilt-content h-full">
                             <div class="h-56 overflow-hidden rounded-t-lg mb-5 relative">
                                 <img src="https://images.unsplash.com/photo-1621929747188-0b4dc28498d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
@@ -672,29 +727,14 @@
 
         <div class="container mx-auto px-6 relative z-10">
 
-            <!-- Newsletter Section -->
-            <div
-                class="flex flex-col md:flex-row justify-between items-center bg-gray-800 p-8 rounded-2xl mb-16 border border-gray-700 shadow-2xl">
-                <div class="mb-6 md:mb-0">
-                    <h3 class="text-2xl font-bold mb-2 text-white">Newsletter Signup</h3>
-                    <p class="text-gray-400 text-sm">Stay updated with the latest marine insights and port news.</p>
-                </div>
-                <form class="flex w-full md:w-auto gap-2">
-                    <input type="email" placeholder="Enter Your Email Address"
-                        class="px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-brand-mint w-full md:w-64">
-                    <button
-                        class="bg-brand-mint hover:bg-brand-deep text-brand-dark font-bold px-6 py-3 rounded-lg transition-colors shadow-glow flex items-center">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
+
 
             <!-- Main Footer Content -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- Col 1: Brand & About -->
                 <div>
                     <a href="index.html" class="block mb-6">
-                        <img src="assets/image/logo.png" alt="Parah Global" class="h-12 w-auto">
+                        <img src="assets/image/logo.png" alt="Parah Global" class="h-20 w-auto">
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
                         We provide professional logistics services of all types, ensuring precision and reliability for

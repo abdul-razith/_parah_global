@@ -75,6 +75,118 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Custom Animations -->
+    <style>
+        /* Scroll Reveal Animation */
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal-on-scroll.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Timeline Animations */
+        .timeline-item-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .timeline-item-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .timeline-item-left.revealed,
+        .timeline-item-right.revealed {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Stagger delays for timeline */
+        .delay-100 {
+            transition-delay: 0.1s;
+        }
+
+        .delay-200 {
+            transition-delay: 0.2s;
+        }
+
+        .delay-300 {
+            transition-delay: 0.3s;
+        }
+
+        .delay-400 {
+            transition-delay: 0.4s;
+        }
+
+        /* Stats counter animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .stat-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .stat-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .stat-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .stat-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        /* Timeline dot pulse */
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 131, 143, 0.4);
+            }
+
+            50% {
+                box-shadow: 0 0 0 8px rgba(0, 131, 143, 0);
+            }
+        }
+
+        .timeline-dot {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        /* Hover effects */
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 
 <body class="font-sans text-text-main antialiased bg-white flex flex-col min-h-screen">
@@ -100,7 +212,7 @@
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2 group">
                 <img id="nav-logo" src="assets/image/logo.png" alt="Parah Global"
-                    class="h-24 w-auto transition-all duration-300">
+                    class="h-16 md:h-20 lg:h-24 w-auto transition-all duration-300">
             </a>
 
             <!-- Desktop Menu -->
@@ -157,32 +269,335 @@
         </div>
 
         <!-- About Content -->
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto space-y-12">
-                    <div>
-                        <h2 class="text-2xl font-bold text-text-main mb-4">Who We Are</h2>
-                        <p class="text-body text-text-muted leading-relaxed">
-                            We support ship agents, vessel managers, and operators with professional marine solutions
-                            that focus on safety, efficiency, and reliability. Our approach is practical, transparent,
-                            and aligned with industry standards.
-                        </p>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div
-                            class="bg-brand-bg p-8 rounded-xl border border-brand-border hover:shadow-lg transition duration-300">
-                            <h3 class="text-xl font-bold text-brand-mint mb-3 uppercase tracking-wide">Our Mission</h3>
-                            <p class="text-text-muted">To provide reliable marine services that help vessels operate
-                                smoothly during port calls, without unnecessary delays.</p>
+                <!-- Who We Are (Enhanced) -->
+                <div class="max-w-6xl mx-auto mb-20">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="order-2 md:order-1">
+                            <span class="text-brand-mint font-bold uppercase tracking-buttons mb-2 block text-xs">About
+                                Us</span>
+                            <h2 class="text-section font-bold text-text-main mb-6">Who We Are</h2>
+                            <p class="text-body text-text-muted leading-relaxed mb-6">
+                                We support ship agents, vessel managers, and operators with professional marine
+                                solutions
+                                that focus on safety, efficiency, and reliability. Our approach is practical,
+                                transparent,
+                                and aligned with industry standards.
+                            </p>
+                            <div class="flex gap-8 text-text-muted text-sm">
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-calendar-check text-brand-mint"></i>
+                                    <span><strong class="text-text-main">Founded:</strong> 2010</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fas fa-globe text-brand-mint"></i>
+                                    <span><strong class="text-text-main">Coverage:</strong> 50+ Ports</span>
+                                </div>
+                            </div>
                         </div>
+                        <div class="order-1 md:order-2 relative">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
+                                alt="Marine Operations Team" class="w-full h-auto rounded-2xl shadow-lg">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Our Story Timeline (Vertical) -->
+                <div class="max-w-4xl mx-auto mb-20">
+                    <div class="text-center mb-16">
+                        <span class="text-brand-mint font-bold uppercase tracking-buttons mb-2 block text-xs">Our
+                            Journey</span>
+                        <h2 class="text-section font-bold text-text-main">Our Story</h2>
+                    </div>
+                    <div class="relative">
+                        <!-- Timeline Line -->
                         <div
-                            class="bg-brand-bg p-8 rounded-xl border border-brand-border hover:shadow-lg transition duration-300">
-                            <h3 class="text-xl font-bold text-brand-mint mb-3 uppercase tracking-wide">Port Expertise
-                            </h3>
-                            <p class="text-text-muted">With hands-on experience supporting vessels at All Indian &
-                                International Ports, we
-                                understand port operations, timelines, and coordination requirements.</p>
+                            class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-brand-mint/20 hidden md:block">
+                        </div>
+
+                        <!-- Milestone 1 -->
+                        <div class="relative mb-12 md:grid md:grid-cols-2 md:gap-12 reveal-on-scroll delay-100">
+                            <div class="md:text-right md:pr-12">
+                                <div class="inline-block bg-white p-6 rounded-lg shadow-md hover-lift">
+                                    <div class="flex items-center gap-4 md:flex-row-reverse">
+                                        <div
+                                            class="w-14 h-14 rounded-full bg-brand-mint/10 flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-rocket text-brand-mint text-xl"></i>
+                                        </div>
+                                        <div class="text-left md:text-right">
+                                            <div class="text-2xl font-bold text-brand-mint">2010</div>
+                                            <h3 class="font-bold text-text-main mt-1">Founded</h3>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-text-muted mt-3 text-left md:text-right">Started operations
+                                        serving vessels at Indian ports with a focus on quality and reliability.</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block"></div>
+                            <!-- Timeline Dot -->
+                            <div
+                                class="absolute left-1/2 top-6 transform -translate-x-1/2 w-4 h-4 rounded-full bg-brand-mint border-4 border-white hidden md:block timeline-dot">
+                            </div>
+                        </div>
+
+                        <!-- Milestone 2 -->
+                        <div class="relative mb-12 md:grid md:grid-cols-2 md:gap-12 reveal-on-scroll delay-200">
+                            <div class="hidden md:block"></div>
+                            <div class="md:pl-12">
+                                <div class="inline-block bg-white p-6 rounded-lg shadow-md hover-lift">
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-14 h-14 rounded-full bg-brand-mint/10 flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-expand-arrows-alt text-brand-mint text-xl"></i>
+                                        </div>
+                                        <div>
+                                            <div class="text-2xl font-bold text-brand-mint">2015</div>
+                                            <h3 class="font-bold text-text-main mt-1">Global Expansion</h3>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-text-muted mt-3">Extended services to international ports,
+                                        partnering with global vessel operators.</p>
+                                </div>
+                            </div>
+                            <!-- Timeline Dot -->
+                            <div
+                                class="absolute left-1/2 top-6 transform -translate-x-1/2 w-4 h-4 rounded-full bg-brand-mint border-4 border-white hidden md:block timeline-dot">
+                            </div>
+                        </div>
+
+                        <!-- Milestone 3 -->
+                        <div class="relative md:grid md:grid-cols-2 md:gap-12 reveal-on-scroll delay-300">
+                            <div class="md:text-right md:pr-12">
+                                <div class="inline-block bg-white p-6 rounded-lg shadow-md hover-lift">
+                                    <div class="flex items-center gap-4 md:flex-row-reverse">
+                                        <div
+                                            class="w-14 h-14 rounded-full bg-brand-mint/10 flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-award text-brand-mint text-xl"></i>
+                                        </div>
+                                        <div class="text-left md:text-right">
+                                            <div class="text-2xl font-bold text-brand-mint">2024</div>
+                                            <h3 class="font-bold text-text-main mt-1">Industry Leader</h3>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm text-text-muted mt-3 text-left md:text-right">Serving 500+ vessels
+                                        annually with ISO 9001:2015 certification and 24/7 support.</p>
+                                </div>
+                            </div>
+                            <div class="hidden md:block"></div>
+                            <!-- Timeline Dot -->
+                            <div
+                                class="absolute left-1/2 top-6 transform -translate-x-1/2 w-4 h-4 rounded-full bg-brand-mint border-4 border-white hidden md:block timeline-dot">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- By The Numbers -->
+                <div class="max-w-6xl mx-auto mb-20">
+                    <div class="text-center mb-12">
+                        <span class="text-brand-mint font-bold uppercase tracking-buttons mb-2 block text-xs">Our
+                            Impact</span>
+                        <h2 class="text-section font-bold text-text-main">By The Numbers</h2>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                        <!-- Stat 1 -->
+                        <div class="card-neumorphic p-6 text-center stat-card">
+                            <i class="fas fa-clock text-brand-mint text-3xl mb-3"></i>
+                            <div class="text-4xl font-bold text-text-main mb-1">15+</div>
+                            <div class="text-sm text-text-muted">Years Experience</div>
+                        </div>
+                        <!-- Stat 2 -->
+                        <div class="card-neumorphic p-6 text-center stat-card">
+                            <i class="fas fa-ship text-brand-mint text-3xl mb-3"></i>
+                            <div class="text-4xl font-bold text-text-main mb-1">500+</div>
+                            <div class="text-sm text-text-muted">Vessels Served</div>
+                        </div>
+                        <!-- Stat 3 -->
+                        <div class="card-neumorphic p-6 text-center stat-card">
+                            <i class="fas fa-globe-asia text-brand-mint text-3xl mb-3"></i>
+                            <div class="text-4xl font-bold text-text-main mb-1">50+</div>
+                            <div class="text-sm text-text-muted">Ports Covered</div>
+                        </div>
+                        <!-- Stat 4 -->
+                        <div class="card-neumorphic p-6 text-center stat-card">
+                            <i class="fas fa-check-circle text-brand-mint text-3xl mb-3"></i>
+                            <div class="text-4xl font-bold text-text-main mb-1">99%</div>
+                            <div class="text-sm text-text-muted">On-Time Service</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Values (Horizontal List) -->
+                <div class="max-w-6xl mx-auto mb-20">
+                    <div class="text-center mb-12">
+                        <span class="text-brand-mint font-bold uppercase tracking-buttons mb-2 block text-xs">What
+                            Drives Us</span>
+                        <h2 class="text-section font-bold text-text-main">Core Values</h2>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Value 1 -->
+                        <div
+                            class="flex items-start gap-4 p-6 bg-white rounded-lg border-l-4 border-brand-mint shadow-sm hover:shadow-md transition reveal-on-scroll delay-100">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 rounded-full bg-brand-mint/10 flex items-center justify-center">
+                                <i class="fas fa-handshake text-brand-mint text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-text-main mb-1">Reliability</h3>
+                                <p class="text-sm text-text-muted">We deliver on our promises, every single time</p>
+                            </div>
+                        </div>
+                        <!-- Value 2 -->
+                        <div
+                            class="flex items-start gap-4 p-6 bg-white rounded-lg border-l-4 border-brand-mint shadow-sm hover:shadow-md transition reveal-on-scroll delay-200">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 rounded-full bg-brand-mint/10 flex items-center justify-center">
+                                <i class="fas fa-comments text-brand-mint text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-text-main mb-1">Transparency</h3>
+                                <p class="text-sm text-text-muted">Clear communication at every step of service</p>
+                            </div>
+                        </div>
+                        <!-- Value 3 -->
+                        <div
+                            class="flex items-start gap-4 p-6 bg-white rounded-lg border-l-4 border-brand-mint shadow-sm hover:shadow-md transition reveal-on-scroll delay-300">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 rounded-full bg-brand-mint/10 flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-brand-mint text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-text-main mb-1">Safety First</h3>
+                                <p class="text-sm text-text-muted">Maritime safety is always our top priority</p>
+                            </div>
+                        </div>
+                        <!-- Value 4 -->
+                        <div
+                            class="flex items-start gap-4 p-6 bg-white rounded-lg border-l-4 border-brand-mint shadow-sm hover:shadow-md transition reveal-on-scroll delay-400">
+                            <div
+                                class="w-12 h-12 flex-shrink-0 rounded-full bg-brand-mint/10 flex items-center justify-center">
+                                <i class="fas fa-headset text-brand-mint text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-text-main mb-1">24/7 Commitment</h3>
+                                <p class="text-sm text-text-muted">Always available when you need us most</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission & Port Expertise (Split Panel) -->
+                <div class="max-w-5xl mx-auto mb-20">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                            <div class="p-10">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-brand-mint/10 flex items-center justify-center">
+                                        <i class="fas fa-bullseye text-brand-mint"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-brand-mint uppercase tracking-wide">Our Mission
+                                    </h3>
+                                </div>
+                                <p class="text-text-muted leading-relaxed">To provide reliable marine services that help
+                                    vessels operate smoothly during port calls, without unnecessary delays.</p>
+                            </div>
+                            <div class="p-10">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div
+                                        class="w-10 h-10 rounded-full bg-brand-mint/10 flex items-center justify-center">
+                                        <i class="fas fa-anchor text-brand-mint"></i>
+                                    </div>
+                                    <h3 class="text-xl font-bold text-brand-mint uppercase tracking-wide">Port Expertise
+                                    </h3>
+                                </div>
+                                <p class="text-text-muted leading-relaxed">With hands-on experience supporting vessels
+                                    at All Indian & International Ports, we understand port operations, timelines, and
+                                    coordination requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client Testimonials (Minimal Borders) -->
+                <div class="max-w-6xl mx-auto mb-20">
+                    <div class="text-center mb-12">
+                        <span class="text-brand-mint font-bold uppercase tracking-buttons mb-2 block text-xs">Client
+                            Feedback</span>
+                        <h2 class="text-section font-bold text-text-main">What Our Clients Say</h2>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Testimonial 1 -->
+                        <div class="relative p-6 bg-white rounded-lg border border-gray-200">
+                            <i class="fas fa-quote-left text-brand-mint text-2xl mb-3 opacity-30"></i>
+                            <p class="text-text-muted mb-6 italic text-sm leading-relaxed">"Exceptional service during
+                                our emergency repair at Mumbai Port. The team coordinated everything seamlessly and got
+                                us back on schedule."</p>
+                            <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-mint/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-user text-brand-mint text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-text-main text-sm">Captain James Rodriguez</div>
+                                    <div class="text-xs text-text-muted">MV Atlantic Carrier</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2 -->
+                        <div class="relative p-6 bg-white rounded-lg border border-gray-200">
+                            <i class="fas fa-quote-left text-brand-mint text-2xl mb-3 opacity-30"></i>
+                            <p class="text-text-muted mb-6 italic text-sm leading-relaxed">"Professional chandling
+                                service with transparent pricing. Their 24/7 availability saved us multiple times during
+                                tight port schedules."</p>
+                            <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-mint/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-user text-brand-mint text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-text-main text-sm">Chief Engineer Amit Patel</div>
+                                    <div class="text-xs text-text-muted">Ocean Freight Lines</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 3 -->
+                        <div class="relative p-6 bg-white rounded-lg border border-gray-200">
+                            <i class="fas fa-quote-left text-brand-mint text-2xl mb-3 opacity-30"></i>
+                            <p class="text-text-muted mb-6 italic text-sm leading-relaxed">"Reliable partner for all our
+                                port operations. They understand maritime requirements and deliver quality service
+                                consistently."</p>
+                            <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-brand-mint/10 flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-user text-brand-mint text-sm"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-text-main text-sm">Fleet Manager Sarah Chen</div>
+                                    <div class="text-xs text-text-muted">Global Shipping Co.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action (Banner) -->
+                <div class="max-w-6xl mx-auto">
+                    <div
+                        class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-brand-deep to-brand-mint p-12 md:p-16 text-center text-white shadow-xl">
+                        <div class="absolute inset-0 bg-black/10"></div>
+                        <div class="relative z-10">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Work Together?</h2>
+                            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+                                Whether you need ship repair, chandling services, or port support, our team is here to
+                                help.
+                                Let's discuss how we can support your vessel operations.
+                            </p>
+                            <a href="contact.html"
+                                class="inline-block bg-white hover:bg-gray-100 text-brand-mint font-bold py-4 px-8 rounded-lg shadow-lg transition uppercase tracking-buttons text-sm">
+                                Get In Touch <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -197,29 +612,14 @@
 
         <div class="container mx-auto px-6 relative z-10">
 
-            <!-- Newsletter Section -->
-            <div
-                class="flex flex-col md:flex-row justify-between items-center bg-gray-800 p-8 rounded-2xl mb-16 border border-gray-700 shadow-2xl">
-                <div class="mb-6 md:mb-0">
-                    <h3 class="text-2xl font-bold mb-2 text-white">Newsletter Signup</h3>
-                    <p class="text-gray-400 text-sm">Stay updated with the latest marine insights and port news.</p>
-                </div>
-                <form class="flex w-full md:w-auto gap-2">
-                    <input type="email" placeholder="Enter Your Email Address"
-                        class="px-4 py-3 rounded-lg bg-gray-900 border border-gray-600 text-white placeholder-gray-500 focus:outline-none focus:border-brand-mint w-full md:w-64">
-                    <button
-                        class="bg-brand-mint hover:bg-brand-deep text-brand-dark font-bold px-6 py-3 rounded-lg transition-colors shadow-glow flex items-center">
-                        <i class="fas fa-paper-plane"></i>
-                    </button>
-                </form>
-            </div>
+
 
             <!-- Main Footer Content -->
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- Col 1: Brand & About -->
                 <div>
                     <a href="index.html" class="block mb-6">
-                        <img src="assets/image/logo.png" alt="Parah Global" class="h-12 w-auto">
+                        <img src="assets/image/logo.png" alt="Parah Global" class="h-20 w-auto">
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">
                         We provide professional logistics services of all types, ensuring precision and reliability for
@@ -326,8 +726,33 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- Mobile Menu Script -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Scroll Animation Script -->
+    <script>
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.addEventListener('DOMContentLoaded', () => {
+            // General reveal items (includes timeline now)
+            document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 
 </html>
