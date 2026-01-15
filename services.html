@@ -153,155 +153,232 @@
 
         <section class="py-20 bg-gray-50 clip-diagonal pb-40">
             <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto perspective-1000">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
 
-                    <!-- 1. Ship Repairing -->
-                    <div class="tilt-card card-neumorphic p-8 group relative overflow-hidden">
-                        <div class="tilt-content">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
-                                <i
-                                    class="fas fa-tools transform group-hover:rotate-45 transition-transform duration-500"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3">Ship Repairing</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Expert afloat repairs, hull
-                                maintenance, welding fabrication, and engine troubleshooting ensuring minimal downtime.
-                            </p>
-                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                    <!-- 1. Steel Renewal and Pipe line Renewal -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-hammer"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Steel Renewal and Pipe line Renewal</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">We carry out Steel Renewal and
+                            Pipe line renewal works in all areas.</p>
+                        <button onclick="openModal('steel')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
 
-                    <!-- 2. Ship Chandling -->
-                    <div class="tilt-card card-neumorphic p-8 group relative overflow-hidden">
-                        <div class="tilt-content">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
-                                <i
-                                    class="fas fa-shopping-basket transform group-hover:scale-110 transition-transform duration-500"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3">Ship Chandling</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Reliable supply of fresh provisions,
-                                bonded stores, deck, engine, and cabin stores sourced from high-quality vendors.</p>
-                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                    <!-- 2. Under Water Works -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-water"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Under Water Works</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">Hull cleaning, Propeller
+                            cleaning, Replacements and Repairs.</p>
+                        <button onclick="openModal('underwater')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
 
-                    <!-- 3. Ship Spares Supply -->
-                    <div class="tilt-card card-neumorphic p-8 group relative overflow-hidden">
-                        <div class="tilt-content">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
-                                <i
-                                    class="fas fa-cogs transform group-hover:rotate-180 transition-transform duration-700"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3">Ship Spares Supply</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Sourcing and logistics for critical
-                                ship spares, machinery parts, and technical equipment with customs handling.</p>
-                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                    <!-- 3. Cargo Crane Repairs and Hydraulic Repairs -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-crutch"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Cargo Crane Repairs and Hydraulic Repairs</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">Cargo Crane JIB repairs,
+                            removal fixing, Sheaves repairs and replacements.</p>
+                        <button onclick="openModal('crane')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
 
-                    <!-- 4. Dry Dock Works -->
-                    <div class="tilt-card card-neumorphic p-8 group relative overflow-hidden">
-                        <div class="tilt-content">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
-                                <i
-                                    class="fas fa-ship transform group-hover:-translate-y-1 transition-transform duration-500"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3">Dry Dock Works</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Work contracts and skilled manpower
-                                management for dry docking projects, blasting, painting, and steel renewal.</p>
-                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                    <!-- 4. Electrical Repairs -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-bolt"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Electrical Repairs</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">AC and DC Motor windings,
+                            Alternator Removal, Handling and Shifting.</p>
+                        <button onclick="openModal('electrical')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
 
-                    <!-- 5. Sludge Oil Collection -->
-                    <div class="tilt-card card-neumorphic p-8 group relative overflow-hidden">
-                        <div class="tilt-content">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
-                                <i
-                                    class="fas fa-oil-can transform group-hover:rotate-12 transition-transform duration-500"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3">Sludge Oil Collection</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Authorized collection and disposal
-                                of sludge oil, bilge water, and maritime waste in compliance with environmental
-                                regulations.</p>
-                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                    <!-- 5. Electronics Repairs -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-microchip"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Electronics Repairs</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">Services for marine electronic
+                            systems.</p>
+                        <button onclick="openModal('electronics')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
 
-                    <!-- 6. Port Ocean Care -->
-                    <div class="tilt-card card-neumorphic p-8 group relative overflow-hidden">
-                        <div class="tilt-content">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
-                                <i
-                                    class="fas fa-water transform group-hover:scale-110 transition-transform duration-500"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3">Port Ocean Care</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Oil spillage cleaning, underwater
-                                hull surveys, propeller polishing, and dredging support services.</p>
-                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                    <!-- 6. Air Condition & Refrigeration Repairs -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-snowflake"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Air Condition & Refrigeration Repairs</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">Leak test and repairs of Air
+                            Con and Refrigeration of all capacities.</p>
+                        <button onclick="openModal('ac')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
 
-                    <!-- 7-10 additional services -->
-                    <div class="tilt-card card-neumorphic p-8 group relative overflow-hidden">
-                        <div class="tilt-content">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
-                                <i
-                                    class="fas fa-file-signature transform group-hover:-translate-y-1 transition-transform duration-500"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3">Port Marine Contracts</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Long-term operational contracts for
-                                port marine services, tug boat operations, and mooring support.</p>
-                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                    <!-- 7. Safety Devices and Life Saving Equipments Services and Inspection -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-life-ring"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Safety Devices and Life Saving Equipments
+                            Services and Inspection</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">Annual Inspection/ Repairs/
+                            Certification of EEBD, SCBA, Immersion Suit.</p>
+                        <button onclick="openModal('safety')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
 
-                    <div class="tilt-card card-neumorphic p-8 group relative overflow-hidden">
-                        <div class="tilt-content">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
-                                <i
-                                    class="fas fa-truck-loading transform group-hover:scale-110 transition-transform duration-500"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3">Port Shore Contracts</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Civil and mechanical engineering
-                                contracts for port infrastructure, shore equipment maintenance, and logistics.</p>
-                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                    <!-- 8. Water Pumps and Valves -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-cog"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Water Pumps and Valves</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">Servicing of all Kinds of
+                            Pumps and Valves.</p>
+                        <button onclick="openModal('pumps')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
 
-                    <div class="tilt-card card-neumorphic p-8 group relative overflow-hidden">
-                        <div class="tilt-content">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
-                                <i
-                                    class="fas fa-anchor transform group-hover:rotate-45 transition-transform duration-500"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3">Salvage Operations</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Emergency response, wreck removal,
-                                and cargo recovery services with specialized equipment and teams.</p>
-                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                    <!-- 9. Purging of Tanker Ships -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-wind"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Purging of Tanker Ships</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">We supply N2 in Liquid/ Gas
+                            form in bulk for purging activities.</p>
+                        <button onclick="openModal('purging')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
 
-                    <div class="tilt-card card-neumorphic p-8 group relative overflow-hidden">
-                        <div class="tilt-content">
-                            <div
-                                class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-inner">
-                                <i
-                                    class="fas fa-user-friends transform group-hover:scale-110 transition-transform duration-500"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-text-main mb-3">Manning Services</h3>
-                            <p class="text-text-muted text-sm mb-4 leading-relaxed">Recruitment and placement of
-                                qualified officers and crew for various types of vessels.</p>
-                            <div class="h-1 w-0 bg-brand-mint group-hover:w-full transition-all duration-500"></div>
+                    <!-- 10. Beaching of Vessels -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-anchor"></i>
                         </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Beaching of Vessels</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">We do undertake beaching of
+                            small vessels including Barges and Tugs.</p>
+                        <button onclick="openModal('beaching')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- 11. Class Surveys -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Class Surveys</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">All Repair services related to
+                            Class Surveys.</p>
+                        <button onclick="openModal('surveys')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- 12. Supply of Provision/ Deck Stores and Engine Stores -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Supply of Provision/ Deck Stores and Engine
+                            Stores</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">Engine Room Stores, Deck
+                            Stores including Classification Society certified MS plates.</p>
+                        <button onclick="openModal('stores')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- 13. Services to Sea Ports -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Services to Sea Ports</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">Marine Department Works,
+                            Mechanical and Electrical department works.</p>
+                        <button onclick="openModal('port')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- 14. Ship Chartering and Brokerage -->
+                    <div
+                        class="card-neumorphic p-8 group relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                        <div
+                            class="w-14 h-14 bg-gradient-to-br from-brand-bg to-white rounded-xl flex items-center justify-center text-2xl text-brand-mint mb-6 shadow-md">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-text-main mb-3">Ship Chartering and Brokerage</h3>
+                        <p class="text-text-muted text-sm mb-6 leading-relaxed flex-grow">Assisting worldwide charters
+                            and connecting with suitable ship owners.</p>
+                        <button onclick="openModal('chartering')"
+                            class="text-brand-mint font-bold text-sm uppercase tracking-buttons flex items-center gap-2 hover:gap-3 transition-all">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
                     </div>
 
                 </div>
@@ -318,7 +395,8 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <a href="index.html" class="block mb-6">
+                    <a href="index.html"
+                        class="inline-block mb-6 bg-white p-3 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
                         <img src="assets/image/logo.png" alt="Parah Global" class="h-20 w-auto">
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">We provide professional logistics services of
@@ -421,6 +499,192 @@
         </div>
     </footer>
 
+    <!-- Services Modal -->
+    <div id="serviceModal" class="fixed inset-0 z-[100] hidden" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <!-- Backdrop -->
+        <div class="fixed inset-0 bg-gray-900/80 backdrop-blur-sm transition-opacity opacity-0" id="modalBackdrop">
+        </div>
+
+        <div class="fixed inset-0 z-10 w-screen overflow-y-auto">
+            <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <!-- Modal Panel -->
+                <div class="relative transform overflow-hidden rounded-2xl bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-2xl opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                    id="modalPanel">
+
+                    <!-- Header -->
+                    <div class="bg-gray-50 px-6 py-4 border-b border-gray-100 flex justify-between items-center">
+                        <h3 class="text-xl font-bold text-brand-dark" id="modalTitle">Service Title</h3>
+                        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-500 focus:outline-none">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="px-6 py-6 max-h-[70vh] overflow-y-auto">
+                        <ul class="space-y-4" id="modalContent">
+                            <!-- Content injected via JS -->
+                        </ul>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="bg-gray-50 px-6 py-4 flex justify-end">
+                        <a href="contact.html"
+                            class="inline-flex justify-center rounded-lg bg-brand-mint px-6 py-2.5 text-sm font-bold text-white shadow-sm hover:bg-brand-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-mint transition-colors">
+                            Request Quote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Script & Data -->
+    <script>
+        // Service Content Data
+        const serviceData = {
+            steel: [
+                "We carry out Steel Renewal and Pipe line renewal works in all areas like",
+                "Deck area",
+                "Engine Room",
+                "Hull",
+                "Transom area",
+                "Cargo Hold",
+                "Hatch Covers and Pontoons"
+            ],
+            underwater: [
+                "Hull cleaning",
+                "Propeller cleaning",
+                "Replacements and Repairs of Propellers",
+                "Replacements of Eco Sounder",
+                "All kinds of underwater surveys and Under Water Repairs",
+                "Our Underwater Diver team consists of the Well Experienced, Certified Diving Team of 10 divers and fitters and all diving equipment, power tools for hull cleaning and underwater Photograph and Video equipment."
+            ],
+            crane: [
+                "Cargo Crane JIB repairs, removal fixing",
+                "Sheaves repairs and replacements",
+                "Wire rope reeving",
+                "All hydraulic works related to Cargo Cranes, Ramps, Hatch Covers",
+                "Repairs of Hydraulic Pumps and Motors, Control blocks etc...",
+                "All Electrical motor windings related to Cargo Cranes"
+            ],
+            electrical: [
+                "AC and DC Motor windings of all capacity",
+                "Alternator Removal, Handling and Shifting to Deck, Electrical Rewinding of Stator, Rotor, Balancing, Fitting back",
+                "Repairs of Generator Control Panels in ECR",
+                "BOW Thruster rewinding"
+            ],
+            electronics: [
+                "Electronics Repairs"
+            ],
+            ac: [
+                "Leak test and repairs of Air Con and Refrigeration of all capacities",
+                "Supply, and installation of New/ Used Compressors, Evaporator coil, Condenser Unit",
+                "Supply and fitting of all valves and other spares related to cooling systems",
+                "Pipe line, Duct replacements",
+                "Thermal Insulation jobs"
+            ],
+            safety: [
+                "Annual Inspection/ Repairs/ Certification of EEBD, SCBA, Immersion Suit, Medical O2, BA Compressor Air quality test. Etc…",
+                "Fire Appliances – CO2, Foam, DCP, FE systems",
+                "Life Boats, Rescue Boats, Life rafts of all capacity"
+            ],
+            pumps: [
+                "Servicing of all Kinds of Pumps and Valves",
+                "Supply of all kinds of valves as per IMPA",
+                "Supply of Used Refurbished and Overhauled Pumps"
+            ],
+            purging: [
+                "We supply N2 in Liquid/ Gas form in bulk for purging activities of Tanker ships."
+            ],
+            beaching: [
+                "We do undertake beaching of small vessels including Barges and Tugs using air balloons and other tackles"
+            ],
+            surveys: [
+                "All Repair services related to Class Surveys",
+                "We arrange all surveys related to classification society and carry out all survey related works",
+                "We arrange to supply class certified MS Plates of Marine grades."
+            ],
+            stores: [
+                "Engine Room Stores",
+                "Deck Stores including Classification Society certified MS plates",
+                "Cleaning Material",
+                "Wire Ropes and accessories",
+                "Fresh Vegetables and Fruits",
+                "Fresh Meat and Fish",
+                "All Provisions."
+            ],
+            port: [
+                "Marine Department Works",
+                "Mechanical and Electrical department works",
+                "Civil related works",
+                "Oil Spillage Response – Newly introducing and in the process of establishing a separate unit consisting of basic equipment and trained manpower for responding to Oil Spillage both in the water and the dry land."
+            ],
+            chartering: [
+                "We assist World wide Charters by connecting to the suitable Ship Owners for Chartering of Bulk Carriers, Tankers",
+                "We do Intermediary activities in Ship Chartering, Ship Sales And Purchases"
+            ]
+        };
+
+        // Modal Logic
+        const modal = document.getElementById('serviceModal');
+        const modalBackdrop = document.getElementById('modalBackdrop');
+        const modalPanel = document.getElementById('modalPanel');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalContent = document.getElementById('modalContent');
+        const body = document.body;
+
+        function openModal(serviceId) {
+            const content = serviceData[serviceId];
+            if (!content) return;
+
+            // Set Title
+            const cardTitle = document.querySelector(`button[onclick="openModal('${serviceId}')"]`).parentElement.querySelector('h3').textContent;
+            modalTitle.textContent = cardTitle;
+
+            // Set Content
+            modalContent.innerHTML = content.map(item =>
+                `<li class="flex items-start gap-3">
+                    <i class="fas fa-check-circle text-brand-mint mt-1 flex-shrink-0"></i>
+                    <span class="text-text-muted leading-relaxed">${item}</span>
+                </li>`
+            ).join('');
+
+            // Show Modal
+            modal.classList.remove('hidden');
+            // Small timeout to allow transition
+            setTimeout(() => {
+                modalBackdrop.classList.remove('opacity-0');
+                modalPanel.classList.remove('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+            }, 10);
+
+            body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modalBackdrop.classList.add('opacity-0');
+            modalPanel.classList.add('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                body.style.overflow = '';
+            }, 300);
+        }
+
+        // Close on clicking backdrop
+        modal.addEventListener('click', (e) => {
+            if (e.target === modalBackdrop || e.target.closest('#modalBackdrop')) {
+                closeModal();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    </script>
     <script src="assets/js/main.js"></script>
 </body>
 
